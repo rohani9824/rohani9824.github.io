@@ -111,20 +111,85 @@
       <p class="panel-note">${valid?'برای امنیت، فایل را فقط از لینک رسمی صفحه انتشار دریافت کنید.':'پس از آماده شدن نسخه قابل دانلود، دکمه فعال خواهد شد.'}</p></div></aside></div>`;
   }
   function contact() {
-    const mail=$('#contact-email'), github=$('#github-link'), telegram=$('#telegram-link');
-    if(mail){if(config.contactEmail){mail.textContent=config.contactEmail;mail.href=`mailto:${config.contactEmail}`;} else {mail.textContent='ایمیل هنوز ثبت نشده';mail.removeAttribute('href');mail.classList.add('not-set');}}
-    if(github){if(isValidURL(config.githubUrl)){github.href=config.githubUrl;}else{github.hidden=true;}}
-    if(telegram){if(isValidURL(config.contactTelegram)){telegram.href=config.contactTelegram;}else{telegram.hidden=true;}}
-    const form=$('#contact-form');if(!form)return;
-    form.addEventListener('submit',async e=>{
-      e.preventDefault();
-      if(!form.reportValidity())return;
-      const name=$('#sender-name').value.trim(),subject=$('#sender-subject').value.trim(),message=$('#sender-message').value.trim();
-      const text=`نام: ${name}\nموضوع: ${subject}\n\n${message}`;
-      if(config.contactEmail){location.href=`mailto:${encodeURIComponent(config.contactEmail)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(text)}`;toast('برنامه ایمیل شما برای ارسال پیام باز می‌شود.');}
-      else {
-        try{await navigator.clipboard.writeText(text);toast('پیام کپی شد. برای ارسال، ابتدا ایمیل سایت را تنظیم کنید.');}
-        catch {$('#message-preview').hidden=false;$('#message-preview').value=text;$('#message-preview').focus();toast('متن پیام را از کادر زیر کپی کنید.');}
+    const form = $('#contact-form');
+    if (!form) return;
+    const preview = $('#message-preview');
+    const draft = $('#draft-zone');
+    const feedback = $('#contact-feedback');
+    const whatsApp = config.contactWhatsApp || 'https://wa.me/93706404348';
+    const telegram = config.contactTelegram || 'https://t.me/+93706404348';
+    const email = config.contactEmail || 'afghanvafanorzahi@gmail.com';
+    const setFeedback = message => { if (feedback) feedback.textContent = message; };
+    const inputText = id => ($(id)?.value || '').trim();
+    const requestType = $('#request-type');
+    const queryType = new URLSearchParams(location.search).get('type');
+    if (queryType === 'accounting' && requestType) requestType.value = 'ساخت نرم‌افزار حسابداری';
+    const compose = () => {
+      if (!form.reportValidity()) return null;
+      const features = $$('#contact-form input[name="feature"]:checked').map(x=>x.value);
+      const lines = [
+        'درخواست جدید از وب‌سایت Rohani98',
+        '━━━━━━━━━━━━━━━━━━',
+        `نام: ${inputText('#sender-name')}`,
+        `نوع درخواست: ${inputText('#request-type')}`,
+        `عنوان: ${inputText('#sender-subject')}`,
+      ];
+      if (inputText('#sender-business')) lines.push(`نوع کسب‌وکار: ${inputText('#sender-business')}`);
+      if (inputText('#sender-platform')) lines.push(`پلتفرم: ${inputText('#sender-platform')}`);
+      if (inputText('#sender-contact')) lines.push(`راه تماس: ${inputText('#sender-contact')}`);
+      if (features.length) lines.push(`امکانات موردنیاز: ${features.join('، ')}`);
+      lines.push('', 'توضیحات:', inputText('#sender-message'), '', 'ارسال‌شده از rohani9824.github.io');
+      return lines.join('\n');
+    };
+    const showDraft = text => {
+      if (draft) draft.hidden = false;
+      if (preview) preview.value = text;
+    };
+    const openDestination = url => {
+      const tab = window.open(url, '_blank', 'noopener,noreferrer');
+      if (!tab) window.location.href = url;
+    };
+    $('#send-whatsapp')?.addEventListener('click', () => {
+      const message = compose(); if (message === null) return;
+      showDraft(message);
+      openDestination(`${whatsApp}?text=${encodeURIComponent(message)}`);
+      setFeedback('واتساپ باز می‌شود؛ لطفاً داخل چت دکمه ارسال را بزنید.');
+    });
+    $('#send-email')?.addEventListener('click', () => {
+      const message = compose(); if (message === null) return;
+      showDraft(message);
+      const subject = `Rohani98 | ${inputText('#request-type')} | ${inputText('#sender-subject')}`;
+      window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+      setFeedback('برنامه ایمیل شما باز می‌شود؛ لطفاً پیام را در همان برنامه ارسال کنید.');
+    });
+    $('#send-telegram')?.addEventListener('click', () => {
+      const message = compose(); if (message === null) return;
+      showDraft(message);
+      // Opening the link is synchronous to avoid popup blocking; clipboard may resolve later.
+      openDestination(telegram);
+      if (navigator.clipboard?.writeText) {
+        navigator.clipboard.writeText(message)
+          .then(() => setFeedback('متن درخواست کپی شد. آن را داخل چت تلگرام بچسبانید و ارسال کنید.'))
+          .catch(() => setFeedback('متن درخواست در کادر پایین آماده است؛ آن را کپی کنید و در تلگرام بفرستید.'));
+      } else {
+        setFeedback('متن درخواست در کادر پایین آماده است؛ آن را کپی کنید و در تلگرام بفرستید.');
+      }
+    });
+    $('#copy-request')?.addEventListener('click', async () => {
+      const message = preview?.value || compose();
+      if (!message) return;
+      showDraft(message);
+      try {
+        if (navigator.clipboard?.writeText) {
+          await navigator.clipboard.writeText(message);
+        } else {
+          preview.focus(); preview.select();
+          if (!document.execCommand('copy')) throw new Error('Copy failed');
+        }
+        setFeedback('متن درخواست کپی شد.');
+      } catch {
+        preview?.focus(); preview?.select();
+        setFeedback('متن پیام انتخاب شده است؛ با Ctrl+C آن را کپی کنید.');
       }
     });
   }

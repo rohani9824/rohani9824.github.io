@@ -6,9 +6,12 @@ window.ROHANI_CONFIG = {
   "developer": "حافظ محمد یوسف روحانی جانان",
   "developerRole": "برنامه نویس حرفه یی",
   "studioName": "Rohani98 Software Studio",
-  "contactEmail": "",
+  "contactEmail": "afghanvafanorzahi@gmail.com",
+  "contactWhatsApp": "https://wa.me/93706404348",
+  "whatsappNumber": "0706404348",
+  "telegramNumber": "0706404348",
   "githubUrl": "https://github.com/rohani9824",
-  "contactTelegram": "",
+  "contactTelegram": "https://t.me/+93706404348",
   "domain": "https://rohani9824.github.io"
 };
 
