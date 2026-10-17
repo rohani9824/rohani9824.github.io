@@ -24,7 +24,7 @@ window.ROHANI_APPS = [
     id: "tricalendarpro", name: "TriCalendarPro", platform: "android",
     category: "تقویم و ابزار کاربردی", icon: "calendar", accent: "violet", featured: true,
     tagline: "تقویم شمسی، میلادی و هجری قمری برای اندروید",
-    description: "تقویم سه‌گانه با محیط فارسی برای مشاهده تاریخ شمسی، میلادی و هجری قمری. نسخه ۵٫۰ برنامه بررسی شده است. فایل دانلودی فعلی، نسخه آزمایشی (Debug) برنامه است و با وجود آزمایش موفق روی گوشی، نسخه رسمی Release نیست. مناسب برای اندروید ۶ به بالا در دستگاه‌های ARM64.",
+    description: "تقویم سه‌گانه با محیط فارسی برای مشاهده تاریخ شمسی، میلادی و هجری قمری. نسخه ۵٫۰ برنامه بررسی شده است. فایل دانلودی فعلی،  (Debug) برنامه است و با وجود آزمایش موفق روی گوشی، نسخه رسمی Release نیست. مناسب برای اندروید ۶ به بالا در دستگاه‌های ARM64.",
     features: ["تقویم شمسی", "تقویم میلادی", "تقویم هجری قمری", "رابط فارسی"],
     version: "5.0", size: "24.5 MB", downloadUrl: "https://github.com/rohani9824/rohani9824.github.io/releases/download/v5.0-test/TriCalendarPro-Debug.apk", status: "available"
   },
