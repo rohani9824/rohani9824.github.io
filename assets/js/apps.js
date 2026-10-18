@@ -230,39 +230,69 @@ window.ROHANI_APPS = [
     "id": "interactivewallpaper",
     "name": "InteractiveWallpaper",
     "platform": "windows",
-    "category": "شخصی‌سازی",
+    "category": "شخصی‌سازی و والپیپر زنده",
     "icon": "sparkles",
-    "accent": "emerald",
+    "accent": "cyan",
     "featured": false,
-    "tagline": "والپیپر تعاملی دسکتاپ",
-    "description": "والپیپر با جلوه‌های بصری و تعامل با حرکت ماوس. پیش از انتشار فایل نصب و توضیحات سیستم موردنیاز را تکمیل کنید.",
+    "tagline": "دسکتاپ خود را با نور، حرکت و افکت‌های تعاملی زنده کنید",
+    "description": "InteractiveWallpaper یک ابزار شخصی‌سازی دسکتاپ برای ویندوز است که با جلوه‌های بصری زنده و واکنش به حرکت نشانگر ماوس، فضای دسکتاپ را جذاب‌تر می‌کند. طراحی برنامه با تمرکز بر پس‌زمینه پویا، افکت آتش و کنترل تجربه بصری انجام شده است. فایل نصب نسخه ۱٫۰ در صفحه رسمی GitHub Releases منتشر شده است.",
     "features": [
-      "جلوه‌های بصری",
-      "تعامل با ماوس",
-      "شخصی‌سازی دسکتاپ"
+      "والپیپر زنده و تعاملی روی دسکتاپ ویندوز",
+      "افکت‌های آتش و جلوه‌های نورانی",
+      "واکنش بصری به حرکت ماوس",
+      "گزینه‌های تنظیمات و شخصی‌سازی",
+      "پشتیبانی از اجرای خودکار همراه ویندوز (در صورت فعال‌سازی)"
     ],
-    "version": "—",
-    "size": "—",
-    "downloadUrl": "",
-    "status": "pending",
-    "summary": "پس‌زمینه تعاملی دسکتاپ با جلوه‌های گرافیکی و واکنش به حرکت نشانگر.",
-    "audience": "کاربران ویندوز علاقه‌مند به شخصی‌سازی دسکتاپ",
+    "version": "1.0",
+    "size": "30.9 MB",
+    "downloadUrl": "https://github.com/rohani9824/rohani9824.github.io/releases/download/interactivewallpaper-v1.0/InteractiveWallpaper_Setup.exe",
+    "status": "available",
+    "summary": "تجربه‌ای مدرن از پس‌زمینه‌های پویا، افکت آتش و واکنش به حرکت ماوس در ویندوز.",
+    "audience": "کاربران ویندوز، علاقه‌مندان به ظاهر متفاوت دسکتاپ و جلوه‌های گرافیکی زنده",
     "requirements": [
-      "سیستم‌عامل ویندوز",
-      "سازگاری گرافیکی پس از آزمایش نسخه نهایی اعلام می‌شود"
+      "ویندوز ۱۰ یا ۱۱ (سازگاری هر سیستم باید آزمایش شود)",
+      "سیستم دارای توان گرافیکی مناسب برای نمایش افکت‌های زنده",
+      "فایل نصب رسمی InteractiveWallpaper_Setup.exe با حجم ۳۰٫۹ مگابایت"
     ],
     "installation": [
-      "فایل نصب پس از تکمیل جلوه‌ها و آزمون‌ها ارائه می‌شود."
+      "فایل InteractiveWallpaper_Setup.exe را از دکمه دانلود دریافت کنید.",
+      "فایل را روی ویندوز اجرا کنید و دستورهای نصب را دنبال کنید.",
+      "برنامه را باز کرده و جلوه‌های موجود و گزینه‌های تنظیمات را بررسی کنید.",
+      "در صورت تمایل، قابلیت اجرای خودکار همراه ویندوز را از تنظیمات برنامه فعال کنید."
     ],
     "releaseNotes": [
-      "پروژه در مرحله تکمیل افکت‌ها است.",
-      "فعلاً فایل دریافت عمومی در دسترس نیست."
+      "انتشار InteractiveWallpaper نسخه ۱٫۰",
+      "فایل نصب ویندوز با حجم ۳۰٫۹ مگابایت",
+      "والپیپر تعاملی همراه جلوه‌های بصری و افکت آتش"
     ],
     "developer": "حافظ محمد یوسف روحانی جانان",
     "developerRole": "برنامه نویس حرفه یی",
     "publisher": "Rohani98 Software Studio",
-    "releaseUrl": "",
-    "fileName": "—",
-    "fileType": "هنوز منتشر نشده"
+    "releaseUrl": "https://github.com/rohani9824/rohani9824.github.io/releases/tag/interactivewallpaper-v1.0",
+    "fileName": "InteractiveWallpaper_Setup.exe",
+    "fileType": "EXE — Windows Installer",
+    "landingUrl": "interactivewallpaper.html"
+  }];
+
+/* راهبری صفحه اختصاصی InteractiveWallpaper، بدون نیاز به تغییر main.js */
+(() => {
+  'use strict';
+  const specialId = 'interactivewallpaper';
+  const landingPage = 'interactivewallpaper.html';
+  const isSpecialAppLink = href => {
+    try {
+      const url = new URL(href, window.location.href);
+      return /\/app\.html$/i.test(url.pathname) && url.searchParams.get('id') === specialId;
+    } catch { return false; }
+  };
+  if (isSpecialAppLink(window.location.href)) {
+    window.location.replace(landingPage);
+    return;
   }
-];
+  document.addEventListener('click', event => {
+    const link = event.target?.closest?.('a[href]');
+    if (!link || !isSpecialAppLink(link.href) || event.defaultPrevented || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || link.target === '_blank') return;
+    event.preventDefault();
+    window.location.assign(landingPage);
+  }, true);
+})();
