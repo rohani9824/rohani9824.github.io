@@ -1,6 +1,6 @@
 /* Rohani98 catalog · نسخه حرفه‌ای معرفی نرم‌افزارها
    اطلاعات برنامه‌ها را اینجا به‌روزرسانی کنید؛ فایل‌های منتشرنشده با دانلود غیرفعال نمایش داده می‌شوند.
-   توجه: MaxPlayer v1.0 و TriCalendarPro v5.0 به فایل‌های موجود در GitHub Releases متصل‌اند. */
+   برنامه‌های منتشرشده شامل TriCalendarPro، MaxPlayer، InteractiveWallpaper و RohaniScreenshot هستند. */
 window.ROHANI_CONFIG = {
   "siteName": "Rohani98",
   "developer": "حافظ محمد یوسف روحانی جانان",
@@ -16,6 +16,51 @@ window.ROHANI_CONFIG = {
 };
 
 window.ROHANI_APPS = [
+    {
+        "id": "rohaniscreenshot",
+        "name": "RohaniScreenshot",
+        "platform": "windows",
+        "category": "تصویربرداری از صفحه",
+        "icon": "scan",
+        "accent": "cyan",
+        "featured": true,
+        "tagline": "تصویربرداری از صفحه نمایش با سبک جدید",
+        "description": "RohaniScreenshot یک نرم‌افزار تصویربرداری از صفحه نمایش برای ویندوز، از مجموعه Rohani98 Software Studio است. فایل نصب نسخه ۱٫۰ منتشر شده است. تصویرهای تبلیغاتی صفحه اختصاصی صرفاً طرح گرافیکی مفهومی هستند و لزوماً نمای واقعی یا فهرست ویژگی‌های تأییدشده برنامه نیستند.",
+        "features": [
+            "ابزار تصویربرداری از صفحه نمایش ویندوز",
+            "فایل نصب مستقل برای ویندوز",
+            "صفحه اختصاصی فارسی و راهنمای دریافت",
+            "نسخه ۱٫۰ منتشرشده در GitHub Releases"
+        ],
+        "version": "1.0",
+        "size": "23.05 MB",
+        "downloadUrl": "https://github.com/rohani9824/rohani9824.github.io/releases/download/rohaniscreenshot-v1.0/RohaniScreenshot_Setup.exe",
+        "status": "available",
+        "summary": "نرم‌افزار اختصاصی تصویربرداری از صفحه نمایش برای ویندوز با صفحه معرفی سایبری و گرافیکی.",
+        "audience": "کاربران ویندوز، تولیدکنندگان محتوا، مدرس‌ها و افرادی که از صفحه نمایش تصویر تهیه می‌کنند",
+        "requirements": [
+            "سیستم‌عامل ویندوز",
+            "میزان سازگاری و منابع موردنیاز دستگاه باید با اجرای نصب‌کننده بررسی شود",
+            "فایل نصب RohaniScreenshot_Setup.exe با حجم حدود ۲۳٫۰۵ مگابایت"
+        ],
+        "installation": [
+            "روی دکمه دانلود کلیک کنید و RohaniScreenshot_Setup.exe را از انتشار رسمی GitHub دریافت کنید.",
+            "فایل را در ویندوز اجرا کنید و مراحل نصب‌کننده را دنبال کنید.",
+            "پس از نصب، برنامه را باز کنید و امکانات آن را بررسی کنید."
+        ],
+        "releaseNotes": [
+            "انتشار RohaniScreenshot v1.0",
+            "فایل نصب برنامه برای ویندوز منتشر شده است.",
+            "صفحه معرفی تصویری در وب‌سایت Rohani98 اضافه شده است."
+        ],
+        "developer": "حافظ محمد یوسف روحانی جانان",
+        "developerRole": "برنامه نویس حرفه یی",
+        "publisher": "Rohani98 Software Studio",
+        "releaseUrl": "https://github.com/rohani9824/rohani9824.github.io/releases/tag/rohaniscreenshot-v1.0",
+        "fileName": "RohaniScreenshot_Setup.exe",
+        "fileType": "EXE — Windows Installer",
+        "landingUrl": "rohaniscreenshot.html"
+    },
   {
     "id": "voicemind-ai-pro",
     "name": "VoiceMind AI Pro",
@@ -272,52 +317,7 @@ window.ROHANI_APPS = [
     "fileName": "InteractiveWallpaper_Setup.exe",
     "fileType": "EXE — Windows Installer",
     "landingUrl": "interactivewallpaper.html"
-  },
-    {
-        "id": "rohaniscreenshot",
-        "name": "RohaniScreenshot",
-        "platform": "windows",
-        "category": "تصویربرداری از صفحه",
-        "icon": "camera",
-        "accent": "cyan",
-        "featured": true,
-        "tagline": "تصویربرداری از صفحه نمایش با سبک جدید",
-        "description": "RohaniScreenshot یک نرم‌افزار تصویربرداری از صفحه نمایش برای ویندوز، از مجموعه Rohani98 Software Studio است. فایل نصب نسخه ۱٫۰ منتشر شده است. تصویرهای تبلیغاتی صفحه اختصاصی صرفاً طرح گرافیکی مفهومی هستند و لزوماً نمای واقعی یا فهرست ویژگی‌های تأییدشده برنامه نیستند.",
-        "features": [
-            "ابزار تصویربرداری از صفحه نمایش ویندوز",
-            "فایل نصب مستقل برای ویندوز",
-            "صفحه اختصاصی فارسی و راهنمای دریافت",
-            "نسخه ۱٫۰ منتشرشده در GitHub Releases"
-        ],
-        "version": "1.0",
-        "size": "23.05 MB",
-        "downloadUrl": "https://github.com/rohani9824/rohani9824.github.io/releases/download/rohaniscreenshot-v1.0/RohaniScreenshot_Setup.exe",
-        "status": "available",
-        "summary": "نرم‌افزار اختصاصی تصویربرداری از صفحه نمایش برای ویندوز با صفحه معرفی سایبری و گرافیکی.",
-        "audience": "کاربران ویندوز، تولیدکنندگان محتوا، مدرس‌ها و افرادی که از صفحه نمایش تصویر تهیه می‌کنند",
-        "requirements": [
-            "سیستم‌عامل ویندوز",
-            "میزان سازگاری و منابع موردنیاز دستگاه باید با اجرای نصب‌کننده بررسی شود",
-            "فایل نصب RohaniScreenshot_Setup.exe با حجم حدود ۲۳٫۰۵ مگابایت"
-        ],
-        "installation": [
-            "روی دکمه دانلود کلیک کنید و RohaniScreenshot_Setup.exe را از انتشار رسمی GitHub دریافت کنید.",
-            "فایل را در ویندوز اجرا کنید و مراحل نصب‌کننده را دنبال کنید.",
-            "پس از نصب، برنامه را باز کنید و امکانات آن را بررسی کنید."
-        ],
-        "releaseNotes": [
-            "انتشار RohaniScreenshot v1.0",
-            "فایل نصب برنامه برای ویندوز منتشر شده است.",
-            "صفحه معرفی تصویری در وب‌سایت Rohani98 اضافه شده است."
-        ],
-        "developer": "حافظ محمد یوسف روحانی جانان",
-        "developerRole": "برنامه نویس حرفه یی",
-        "publisher": "Rohani98 Software Studio",
-        "releaseUrl": "https://github.com/rohani9824/rohani9824.github.io/releases/tag/rohaniscreenshot-v1.0",
-        "fileName": "RohaniScreenshot_Setup.exe",
-        "fileType": "EXE — Windows Installer",
-        "landingUrl": "rohaniscreenshot.html"
-    }
+  }
 ];
 
 /* صفحه‌های اختصاصی محصولات — نگه‌داری برنامه‌های پیشین */
