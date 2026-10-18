@@ -230,39 +230,121 @@ window.ROHANI_APPS = [
     "id": "interactivewallpaper",
     "name": "InteractiveWallpaper",
     "platform": "windows",
-    "category": "شخصی‌سازی",
+    "category": "شخصی‌سازی و والپیپر زنده",
     "icon": "sparkles",
-    "accent": "emerald",
+    "accent": "cyan",
     "featured": false,
-    "tagline": "والپیپر تعاملی دسکتاپ",
-    "description": "والپیپر با جلوه‌های بصری و تعامل با حرکت ماوس. پیش از انتشار فایل نصب و توضیحات سیستم موردنیاز را تکمیل کنید.",
+    "tagline": "دسکتاپ خود را با نور، حرکت و افکت‌های تعاملی زنده کنید",
+    "description": "InteractiveWallpaper یک ابزار شخصی‌سازی دسکتاپ برای ویندوز است که با جلوه‌های بصری زنده و واکنش به حرکت نشانگر ماوس، فضای دسکتاپ را جذاب‌تر می‌کند. طراحی برنامه با تمرکز بر پس‌زمینه پویا، افکت آتش و کنترل تجربه بصری انجام شده است. فایل نصب نسخه ۱٫۰ در صفحه رسمی GitHub Releases منتشر شده است.",
     "features": [
-      "جلوه‌های بصری",
-      "تعامل با ماوس",
-      "شخصی‌سازی دسکتاپ"
+      "والپیپر زنده و تعاملی روی دسکتاپ ویندوز",
+      "افکت‌های آتش و جلوه‌های نورانی",
+      "واکنش بصری به حرکت ماوس",
+      "گزینه‌های تنظیمات و شخصی‌سازی",
+      "پشتیبانی از اجرای خودکار همراه ویندوز (در صورت فعال‌سازی)"
     ],
-    "version": "—",
-    "size": "—",
-    "downloadUrl": "",
-    "status": "pending",
-    "summary": "پس‌زمینه تعاملی دسکتاپ با جلوه‌های گرافیکی و واکنش به حرکت نشانگر.",
-    "audience": "کاربران ویندوز علاقه‌مند به شخصی‌سازی دسکتاپ",
+    "version": "1.0",
+    "size": "30.9 MB",
+    "downloadUrl": "https://github.com/rohani9824/rohani9824.github.io/releases/download/interactivewallpaper-v1.0/InteractiveWallpaper_Setup.exe",
+    "status": "available",
+    "summary": "تجربه‌ای مدرن از پس‌زمینه‌های پویا، افکت آتش و واکنش به حرکت ماوس در ویندوز.",
+    "audience": "کاربران ویندوز، علاقه‌مندان به ظاهر متفاوت دسکتاپ و جلوه‌های گرافیکی زنده",
     "requirements": [
-      "سیستم‌عامل ویندوز",
-      "سازگاری گرافیکی پس از آزمایش نسخه نهایی اعلام می‌شود"
+      "ویندوز ۱۰ یا ۱۱ (سازگاری هر سیستم باید آزمایش شود)",
+      "سیستم دارای توان گرافیکی مناسب برای نمایش افکت‌های زنده",
+      "فایل نصب رسمی InteractiveWallpaper_Setup.exe با حجم ۳۰٫۹ مگابایت"
     ],
     "installation": [
-      "فایل نصب پس از تکمیل جلوه‌ها و آزمون‌ها ارائه می‌شود."
+      "فایل InteractiveWallpaper_Setup.exe را از دکمه دانلود دریافت کنید.",
+      "فایل را روی ویندوز اجرا کنید و دستورهای نصب را دنبال کنید.",
+      "برنامه را باز کرده و جلوه‌های موجود و گزینه‌های تنظیمات را بررسی کنید.",
+      "در صورت تمایل، قابلیت اجرای خودکار همراه ویندوز را از تنظیمات برنامه فعال کنید."
     ],
     "releaseNotes": [
-      "پروژه در مرحله تکمیل افکت‌ها است.",
-      "فعلاً فایل دریافت عمومی در دسترس نیست."
+      "انتشار InteractiveWallpaper نسخه ۱٫۰",
+      "فایل نصب ویندوز با حجم ۳۰٫۹ مگابایت",
+      "والپیپر تعاملی همراه جلوه‌های بصری و افکت آتش"
     ],
     "developer": "حافظ محمد یوسف روحانی جانان",
     "developerRole": "برنامه نویس حرفه یی",
     "publisher": "Rohani98 Software Studio",
-    "releaseUrl": "",
-    "fileName": "—",
-    "fileType": "هنوز منتشر نشده"
-  }
+    "releaseUrl": "https://github.com/rohani9824/rohani9824.github.io/releases/tag/interactivewallpaper-v1.0",
+    "fileName": "InteractiveWallpaper_Setup.exe",
+    "fileType": "EXE — Windows Installer",
+    "landingUrl": "interactivewallpaper.html"
+  },
+    {
+        "id": "rohaniscreenshot",
+        "name": "RohaniScreenshot",
+        "platform": "windows",
+        "category": "تصویربرداری از صفحه",
+        "icon": "camera",
+        "accent": "cyan",
+        "featured": true,
+        "tagline": "تصویربرداری از صفحه نمایش با سبک جدید",
+        "description": "RohaniScreenshot یک نرم‌افزار تصویربرداری از صفحه نمایش برای ویندوز، از مجموعه Rohani98 Software Studio است. فایل نصب نسخه ۱٫۰ منتشر شده است. تصویرهای تبلیغاتی صفحه اختصاصی صرفاً طرح گرافیکی مفهومی هستند و لزوماً نمای واقعی یا فهرست ویژگی‌های تأییدشده برنامه نیستند.",
+        "features": [
+            "ابزار تصویربرداری از صفحه نمایش ویندوز",
+            "فایل نصب مستقل برای ویندوز",
+            "صفحه اختصاصی فارسی و راهنمای دریافت",
+            "نسخه ۱٫۰ منتشرشده در GitHub Releases"
+        ],
+        "version": "1.0",
+        "size": "23.05 MB",
+        "downloadUrl": "https://github.com/rohani9824/rohani9824.github.io/releases/download/rohaniscreenshot-v1.0/RohaniScreenshot_Setup.exe",
+        "status": "available",
+        "summary": "نرم‌افزار اختصاصی تصویربرداری از صفحه نمایش برای ویندوز با صفحه معرفی سایبری و گرافیکی.",
+        "audience": "کاربران ویندوز، تولیدکنندگان محتوا، مدرس‌ها و افرادی که از صفحه نمایش تصویر تهیه می‌کنند",
+        "requirements": [
+            "سیستم‌عامل ویندوز",
+            "میزان سازگاری و منابع موردنیاز دستگاه باید با اجرای نصب‌کننده بررسی شود",
+            "فایل نصب RohaniScreenshot_Setup.exe با حجم حدود ۲۳٫۰۵ مگابایت"
+        ],
+        "installation": [
+            "روی دکمه دانلود کلیک کنید و RohaniScreenshot_Setup.exe را از انتشار رسمی GitHub دریافت کنید.",
+            "فایل را در ویندوز اجرا کنید و مراحل نصب‌کننده را دنبال کنید.",
+            "پس از نصب، برنامه را باز کنید و امکانات آن را بررسی کنید."
+        ],
+        "releaseNotes": [
+            "انتشار RohaniScreenshot v1.0",
+            "فایل نصب برنامه برای ویندوز منتشر شده است.",
+            "صفحه معرفی تصویری در وب‌سایت Rohani98 اضافه شده است."
+        ],
+        "developer": "حافظ محمد یوسف روحانی جانان",
+        "developerRole": "برنامه نویس حرفه یی",
+        "publisher": "Rohani98 Software Studio",
+        "releaseUrl": "https://github.com/rohani9824/rohani9824.github.io/releases/tag/rohaniscreenshot-v1.0",
+        "fileName": "RohaniScreenshot_Setup.exe",
+        "fileType": "EXE — Windows Installer",
+        "landingUrl": "rohaniscreenshot.html"
+    }
 ];
+
+/* صفحه‌های اختصاصی محصولات — نگه‌داری برنامه‌های پیشین */
+(() => {
+  'use strict';
+  const pages = {
+    'interactivewallpaper': 'interactivewallpaper.html',
+    'rohaniscreenshot': 'rohaniscreenshot.html'
+  };
+  const appPageFor = href => {
+    try {
+      const url = new URL(href, window.location.href);
+      if (url.origin !== window.location.origin || !/\/app\.html$/i.test(url.pathname)) return '';
+      return pages[url.searchParams.get('id')] || '';
+    } catch (_) { return ''; }
+  };
+  const directPage = appPageFor(window.location.href);
+  if (directPage) {
+    window.location.replace(directPage);
+    return;
+  }
+  document.addEventListener('click', event => {
+    const el = event.target instanceof Element ? event.target.closest('a[href]') : null;
+    if (!el || event.defaultPrevented || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || el.target === '_blank' || el.hasAttribute('download')) return;
+    const page = appPageFor(el.href);
+    if (!page) return;
+    event.preventDefault();
+    window.location.assign(page);
+  }, true);
+})();
