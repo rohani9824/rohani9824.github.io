@@ -17,6 +17,51 @@ window.ROHANI_CONFIG = {
 
 window.ROHANI_APPS = [
   {
+      "id": "rohaniocr",
+      "name": "RohaniOCR",
+      "platform": "windows",
+      "category": "OCR و استخراج متن",
+      "icon": "scan",
+      "accent": "cyan",
+      "featured": true,
+      "tagline": "استخراج متن از تصویر و اسناد در ویندوز",
+      "description": "RohaniOCR ابزاری برای تشخیص و استخراج متن از تصاویر و اسناد تصویری روی ویندوز است. نسخه ۱٫۰ آن در GitHub Releases منتشر شده است. تصویر گرافیکی صفحه محصول و نمایش متحرک اسکن، نمونه تبلیغاتی/مفهومی هستند و الزاماً نمای دقیق نرم‌افزار نصب‌شده نیستند.",
+      "features": [
+          "شناسایی و استخراج متن از تصاویر",
+          "کاربرد برای نوشته‌های موجود در تصویر اسناد",
+          "دریافت نصب‌کننده از GitHub Releases",
+          "صفحه معرفی اختصاصی با انیمیشن‌های نئونی"
+      ],
+      "version": "1.0",
+      "size": "21.2 MB",
+      "downloadUrl": "https://github.com/rohani9824/rohani9824.github.io/releases/download/rohaniocr-v1.0/RohaniOCR_Setup.exe",
+      "status": "available",
+      "summary": "استخراج متن از تصاویر در ویندوز؛ نسخه ۱٫۰ با صفحه معرفی متحرک و دانلود رسمی.",
+      "audience": "کاربران ویندوز، دانشجویان و کارکنان اداری که به استخراج متن از تصاویر نیاز دارند",
+      "requirements": [
+          "سیستم‌عامل ویندوز",
+          "فایل نصب RohaniOCR_Setup.exe",
+          "دقت و زبان‌های پشتیبانی‌شده بر اساس نوع تصویر و نسخه نصب‌شده نیازمند آزمایش است"
+      ],
+      "installation": [
+          "فایل RohaniOCR_Setup.exe را از دکمه دانلود رسمی دریافت کنید.",
+          "فایل نصب را در ویندوز اجرا و مراحل راهنما را دنبال کنید.",
+          "برنامه را باز کنید و استخراج متن از یک تصویر آزمایشی را بررسی کنید."
+      ],
+      "releaseNotes": [
+          "انتشار RohaniOCR نسخه ۱٫۰",
+          "فایل نصبی منتشرشده در GitHub Releases با حجم نمایشی ۲۱٫۲ مگابایت",
+          "صفحه معرفی گرافیکی متحرک با پیوند مستقیم دانلود"
+      ],
+      "developer": "حافظ محمد یوسف روحانی جانان",
+      "developerRole": "برنامه نویس حرفه یی",
+      "publisher": "Rohani98 Software Studio",
+      "releaseUrl": "https://github.com/rohani9824/rohani9824.github.io/releases/tag/rohaniocr-v1.0",
+      "fileName": "RohaniOCR_Setup.exe",
+      "fileType": "EXE — Windows Installer",
+      "landingUrl": "rohaniocr.html"
+  },
+  {
     "id": "rohaniscreenshot",
     "name": "RohaniScreenshot",
     "platform": "windows",
@@ -322,7 +367,8 @@ window.ROHANI_APPS = [
   'use strict';
   const specialPages = {
     interactivewallpaper: 'interactivewallpaper.html',
-    rohaniscreenshot: 'rohaniscreenshot.html'
+    rohaniscreenshot: 'rohaniscreenshot.html',
+    rohaniocr: 'rohaniocr.html'
   };
   const getPage = href => {
     try {
