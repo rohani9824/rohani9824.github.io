@@ -1,5 +1,109 @@
 <!doctype html>
-<html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#050a13"><meta name="description" content="Rohani98 - مجموعه معرفی و دانلود برنامه‌های ویندوز و اندروید"><meta name="color-scheme" content="dark"><title>خانه | Rohani98</title><link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg"><link rel="stylesheet" href="assets/css/style.css"><script defer src="assets/js/apps.js"></script><script defer src="assets/js/main.js"></script></head><body data-page="home"><a class="skip" href="#main">پرش به محتوا</a>
+<html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#050a13"><meta name="description" content="Rohani98 - مجموعه معرفی و دانلود برنامه‌های ویندوز و اندروید"><meta name="color-scheme" content="dark"><title>خانه | Rohani98</title><link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg"><link rel="stylesheet" href="assets/css/style.css"><script defer src="assets/js/apps.js"></script><script defer src="assets/js/main.js"></script><style id="rohani98-accounting-founder-styles">
+
+/* ===== ROHANI98 :: Neon Accounting Promotion / Founder Spotlight ===== */
+.r98p-wrap,.r98p-founder{direction:rtl;position:relative;isolation:isolate;color:#eaf8ff;overflow:hidden;font-family:inherit}
+.r98p-wrap *,.r98p-founder *{box-sizing:border-box}
+.r98p-wrap{padding:clamp(70px,8vw,110px) 0;background:radial-gradient(ellipse at 82% 10%,rgba(8,153,221,.18),transparent 41%),radial-gradient(ellipse at 6% 78%,rgba(5,107,171,.16),transparent 46%),linear-gradient(180deg,#050c17,#081425 48%,#050b16);border-top:1px solid rgba(51,190,242,.12);border-bottom:1px solid rgba(51,190,242,.12)}
+.r98p-wrap::before,.r98p-founder::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:-1;background-image:linear-gradient(rgba(60,195,248,.042) 1px,transparent 1px),linear-gradient(90deg,rgba(60,195,248,.042) 1px,transparent 1px);background-size:50px 50px;mask-image:linear-gradient(to bottom,transparent,#000 20%,#000 75%,transparent);animation:r98p-gridshift 28s linear infinite}
+.r98p-container{width:min(1180px,calc(100% - 36px));margin:auto;position:relative;z-index:1}
+.r98p-overline{display:inline-flex;align-items:center;gap:10px;direction:ltr;font-family:ui-monospace,monospace;letter-spacing:.2em;font-size:11px;font-weight:750;color:#67e5ff;text-transform:uppercase}
+.r98p-overline::before{content:"";height:1px;width:31px;background:linear-gradient(90deg,#60edff,transparent)}
+.r98p-heading{font-size:clamp(27px,4.3vw,51px);line-height:1.4;margin:15px 0 12px!important;letter-spacing:-.035em;color:#f7fbff;font-weight:850}
+.r98p-highlight{color:#65e8ff;text-shadow:0 0 29px rgba(33,207,255,.3)}
+.r98p-intro{color:#a8c1d5;line-height:2.1;max-width:800px;margin:0 auto;font-size:clamp(13px,1.65vw,16px)}
+.r98p-head{text-align:center;margin:0 auto 34px}
+.r98p-ticker{display:flex;gap:14px;align-items:center;overflow:hidden;margin-top:24px;mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);border-top:1px solid rgba(82,187,239,.10);border-bottom:1px solid rgba(82,187,239,.10);height:43px;white-space:nowrap}
+.r98p-ticker-inner{display:flex;align-items:center;flex-shrink:0;gap:26px;direction:rtl;animation:r98p-marquee 34s linear infinite;color:#7cbcd9;font-size:12px;letter-spacing:.015em}
+.r98p-ticker-inner span::before{content:'◆';font-size:8px;color:#45dafd;margin-left:21px}
+.r98p-wrap:hover .r98p-ticker-inner{animation-play-state:paused}
+.r98p-showcase{display:grid;grid-template-columns:minmax(0,1.07fr) minmax(0,.93fr);gap:22px;align-items:stretch}
+.r98p-glass{background:linear-gradient(135deg,rgba(17,40,65,.91),rgba(7,20,39,.9));border:1px solid rgba(99,203,249,.23);box-shadow:0 20px 65px rgba(0,0,0,.32),inset 0 1px rgba(162,226,255,.075);border-radius:25px;position:relative;overflow:hidden}
+.r98p-glass::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;background:radial-gradient(500px circle at var(--r98p-x,75%) var(--r98p-y,25%),rgba(49,200,251,.115),transparent 45%)}
+.r98p-slide{padding:clamp(24px,4vw,40px);min-height:410px;display:flex;flex-direction:column;justify-content:center}
+.r98p-slide::before{content:"";position:absolute;inset:0 0 auto;height:2px;background:linear-gradient(90deg,transparent,#21d8fa,transparent);box-shadow:0 0 20px #15cfff;animation:r98p-sweep 6s ease-in-out infinite}
+.r98p-slide-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:26px}
+.r98p-number{font:800 12px ui-monospace,monospace;color:#91aec3;direction:ltr}
+.r98p-chip{font-size:11px;padding:6px 12px;color:#84efff;letter-spacing:.04em;border-radius:999px;border:1px solid rgba(84,225,255,.35);background:rgba(10,138,171,.12);display:inline-flex;gap:7px;align-items:center}
+.r98p-chip::before{content:"";width:6px;height:6px;border-radius:50%;background:#2cf1b4;box-shadow:0 0 11px #2cf1b4}
+.r98p-slide-inner{transition:opacity .32s ease,transform .32s ease;position:relative;z-index:1}
+.r98p-slide-inner.r98p-changing{opacity:.05;transform:translateY(14px)}
+.r98p-slide h3{font-size:clamp(24px,3vw,35px);color:#f7fcff;line-height:1.5;margin:0 0 14px;font-weight:850}
+.r98p-slide h3 em{font-style:normal;color:#5ce6ff}
+.r98p-slide p{font-size:14px;line-height:2;color:#b1cadb;margin:0 0 25px;max-width:520px}
+.r98p-benefits{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:25px}
+.r98p-benefits span{border:1px solid rgba(63,183,234,.21);background:rgba(20,92,130,.16);border-radius:9px;color:#d9f2ff;padding:9px 11px;font-size:12px}
+.r98p-benefits span::before{content:'✓';color:#44eab8;margin-left:7px;font-weight:900}
+.r98p-controls{display:flex;gap:10px;align-items:center;justify-content:space-between;position:relative;z-index:3}
+.r98p-arrow{display:grid;place-items:center;width:39px;height:39px;cursor:pointer;color:#8beeff;border-radius:12px;border:1px solid rgba(66,206,249,.35);background:rgba(41,144,196,.13);font-size:23px;transition:transform .2s,border-color .2s,background .2s}
+.r98p-arrow:hover{transform:translateY(-2px);border-color:#53dcff;background:rgba(35,166,229,.24)}
+.r98p-dots{display:flex;align-items:center;gap:7px;justify-content:center;flex:1;direction:ltr}
+.r98p-dot{width:8px;height:8px;border:0;cursor:pointer;border-radius:12px;background:#37647e;padding:0;transition:width .25s,background .25s}
+.r98p-dot[aria-current="true"]{width:25px;background:#4de2ff;box-shadow:0 0 11px #29cffa}
+.r98p-demo{min-height:410px;display:flex;align-items:center;justify-content:center;padding:26px;position:relative}
+.r98p-demo .r98p-hud{width:min(350px,100%);aspect-ratio:1/1;position:relative;display:grid;place-items:center;transform-style:preserve-3d;animation:r98p-hover 7s ease-in-out infinite}
+.r98p-orbit,.r98p-orbit2,.r98p-orbit3{position:absolute;border-radius:50%;inset:10%;border:1px solid rgba(39,207,255,.44);box-shadow:0 0 45px rgba(24,181,255,.08),inset 0 0 25px rgba(32,210,255,.06)}
+.r98p-orbit{animation:r98p-spin 17s linear infinite;border-style:dashed}
+.r98p-orbit2{inset:21%;border:3px solid transparent;border-top-color:#37d8fd;border-bottom-color:#1484da;animation:r98p-spin 8s linear infinite reverse;filter:drop-shadow(0 0 12px #24beff)}
+.r98p-orbit3{inset:0;opacity:.45;border:1px dotted #3cc6e8;animation:r98p-spin 28s linear infinite}
+.r98p-hud-core{position:relative;width:45%;aspect-ratio:1;border:1px solid #57c8f8;border-radius:24px;display:grid;place-items:center;background:linear-gradient(140deg,#164e72,#07172b);box-shadow:0 0 35px rgba(25,199,247,.29),inset 0 0 20px rgba(26,190,255,.22);transform:rotate(-8deg)}
+.r98p-hud-core svg{width:50%;height:auto;color:#62eaff;filter:drop-shadow(0 0 12px #1cbfff)}
+.r98p-mini{position:absolute;background:rgba(8,29,52,.95);border:1px solid rgba(77,211,250,.43);border-radius:13px;padding:11px 15px;box-shadow:0 12px 34px rgba(0,0,0,.45),0 0 15px rgba(23,202,250,.12);color:#9cedfd;font:700 12px ui-monospace,monospace;direction:ltr;white-space:nowrap}
+.r98p-mini.one{right:-4%;top:16%;animation:r98p-hover 5s ease-in-out infinite}
+.r98p-mini.two{left:-4%;bottom:19%;animation:r98p-hover 6s ease-in-out infinite reverse}
+.r98p-mini.three{right:0;bottom:8%;font-size:10px;color:#51eebc;animation:r98p-hover 7s ease-in-out infinite}
+.r98p-servicebar{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin:25px 0 30px}
+.r98p-servicebar button{background:rgba(13,37,62,.8);color:#b3cfde;border:1px solid rgba(78,180,225,.23);border-radius:13px;padding:11px 15px;font-family:inherit;font-size:12px;cursor:pointer;transition:.22s}
+.r98p-servicebar button:hover,.r98p-servicebar button[aria-pressed="true"]{color:#fff;border-color:#45d6ff;box-shadow:0 0 18px rgba(36,194,240,.16);background:rgba(14,104,156,.38)}
+.r98p-cta{display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none!important;color:#041324!important;background:linear-gradient(100deg,#71eeff,#20baf1);padding:13px 24px;border-radius:13px;font-weight:850;font-size:14px;box-shadow:0 10px 26px rgba(0,169,232,.23),0 0 19px rgba(30,208,255,.16);transition:transform .2s,box-shadow .2s;position:relative;z-index:2}
+.r98p-cta:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(0,169,232,.33),0 0 30px rgba(30,208,255,.25)}
+.r98p-outline{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;text-decoration:none!important;border-radius:13px;border:1px solid rgba(82,203,248,.4);color:#bdeaff!important;background:rgba(19,56,83,.37);font-size:13px;transition:background .2s}
+.r98p-outline:hover{background:rgba(31,114,165,.36)}
+.r98p-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.r98p-faq{margin-top:26px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.55fr);align-items:center;gap:26px;padding:clamp(20px,4vw,33px)}
+.r98p-faq-label{display:block;font:700 11px ui-monospace,monospace;direction:ltr;text-align:right;letter-spacing:.12em;color:#64dbfb;margin-bottom:9px}
+.r98p-faq-title{font-size:clamp(21px,2.4vw,27px);line-height:1.55;margin:0 0 8px!important;color:#fff}
+.r98p-faq-sub{font-size:13px;line-height:1.9;color:#9ab9cb;margin:0}
+.r98p-faq-panel{padding:19px 22px;min-height:167px;background:rgba(4,19,35,.64);border:1px solid rgba(67,193,235,.20);border-radius:17px;display:flex;flex-direction:column;justify-content:center;gap:9px;position:relative;z-index:2}
+.r98p-faq-panel strong{font-size:16px;color:#e7f9ff;line-height:1.7}
+.r98p-faq-panel p{color:#a8c8d9;line-height:1.9;font-size:13px;margin:0}
+.r98p-faq-buttons{display:flex;justify-content:flex-end;gap:7px;position:relative;z-index:2}
+.r98p-faq-buttons button{border:1px solid rgba(85,215,252,.29);background:#0c2d48;border-radius:9px;color:#a6f2ff;cursor:pointer;padding:6px 12px;font-family:inherit}
+.r98p-progress{height:2px;background:rgba(77,174,220,.15);border-radius:2px;overflow:hidden;margin-top:3px}
+.r98p-progress > span{display:block;width:0;height:100%;background:#43d8f9;box-shadow:0 0 12px #46e2ff;animation:r98p-progress 8s linear infinite}
+.r98p-faq:focus-within .r98p-progress>span,.r98p-faq:hover .r98p-progress>span{animation-play-state:paused}
+.r98p-founder{padding:clamp(70px,7vw,100px) 0;background:radial-gradient(ellipse at 15% 45%,rgba(22,148,224,.14),transparent 45%),linear-gradient(180deg,#050b16,#07111f);border-bottom:1px solid rgba(76,196,249,.12)}
+.r98p-founder-grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(270px,.85fr);align-items:center;gap:clamp(22px,5vw,65px)}
+.r98p-founder-card{padding:clamp(24px,4vw,37px)}
+.r98p-founder h2{margin:12px 0 12px!important;font-size:clamp(27px,4vw,45px);line-height:1.55;color:#f2faff;font-weight:850}
+.r98p-founder .r98p-role{color:#70dfff;font-weight:780;margin-bottom:14px;font-size:15px}
+.r98p-founder .r98p-bio{font-size:14px;color:#b4cddb;line-height:2.15;margin-bottom:23px}
+.r98p-tags{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:23px}
+.r98p-tags span{font-size:12px;border:1px solid rgba(64,192,240,.32);background:rgba(13,90,145,.17);padding:8px 11px;border-radius:10px;color:#d1eeff}
+.r98p-location{color:#88ddf1;font-size:13px;margin-bottom:22px!important}
+.r98p-location svg{width:16px;vertical-align:middle;margin-left:6px}
+.r98p-founder-graphic{height:390px;display:grid;place-items:center;position:relative}
+.r98p-emblem{width:min(285px,80%);aspect-ratio:1;position:relative;display:grid;place-items:center;border-radius:50%;background:radial-gradient(circle,rgba(28,147,205,.27),rgba(2,17,32,.02) 65%,transparent);filter:drop-shadow(0 0 32px rgba(34,180,230,.15))}
+.r98p-emblem::before,.r98p-emblem::after{content:"";position:absolute;inset:0;border-radius:50%;border:1px dashed rgba(72,197,252,.56);animation:r98p-spin 23s linear infinite}
+.r98p-emblem::after{inset:11%;border:3px solid transparent;border-left-color:#43e4ff;border-right-color:#26adf7;animation-duration:11s;animation-direction:reverse}
+.r98p-emblem-core{font:900 clamp(54px,9vw,100px) ui-monospace,monospace;letter-spacing:-.09em;color:#ddfaff;text-shadow:0 0 10px #24b9f2,0 0 35px rgba(24,193,255,.6);width:62%;aspect-ratio:1;display:grid;place-items:center;border-radius:23%;background:linear-gradient(135deg,#194c6e,#071527);box-shadow:inset 0 1px 2px rgba(184,239,255,.3),0 0 30px rgba(22,183,245,.24);transform:rotate(-7deg)}
+.r98p-emblem-core span{transform:rotate(7deg);font-size:.78em}
+.r98p-founder-floating{position:absolute;z-index:2;border-radius:12px;border:1px solid #295e7b;background:rgba(7,28,48,.92);padding:10px 16px;font-size:12px;box-shadow:0 15px 30px rgba(0,0,0,.32);color:#78eaff;animation:r98p-hover 5s ease-in-out infinite}
+.r98p-founder-floating.f1{right:0;top:18%}
+.r98p-founder-floating.f2{left:0;bottom:19%;animation-delay:-2s}
+.r98p-founder-floating.f3{right:4%;bottom:7%;font-size:10px;animation-delay:-3s}
+.r98p-visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@keyframes r98p-gridshift{to{background-position:100px 50px}}
+@keyframes r98p-spin{to{transform:rotate(360deg)}}
+@keyframes r98p-hover{0%,100%{transform:translateY(0)}50%{transform:translateY(-13px)}}
+@keyframes r98p-sweep{0%,100%{transform:translateX(85%);opacity:.2}50%{transform:translateX(-85%);opacity:1}}
+@keyframes r98p-marquee{to{transform:translateX(50%)}}
+@keyframes r98p-progress{to{width:100%}}
+@media (max-width:850px){.r98p-showcase,.r98p-founder-grid{grid-template-columns:1fr}.r98p-demo{min-height:310px;order:-1}.r98p-demo .r98p-hud{width:270px}.r98p-faq{grid-template-columns:1fr}.r98p-founder-graphic{height:315px;order:-1}.r98p-founder .r98p-bio{font-size:13px}}
+@media (max-width:480px){.r98p-container{width:calc(100% - 24px)}.r98p-wrap{padding:55px 0}.r98p-heading{font-size:28px}.r98p-slide{min-height:370px;padding:20px}.r98p-slide h3{font-size:24px}.r98p-servicebar button{font-size:11px;padding:9px 10px}.r98p-faq-panel{min-height:190px}.r98p-mini{font-size:10px;padding:9px}.r98p-founder-card{padding:22px}.r98p-founder-graphic{height:275px}.r98p-cta,.r98p-outline{width:100%}}
+@media(prefers-reduced-motion:reduce){.r98p-wrap *,.r98p-wrap::before,.r98p-founder *,.r98p-founder::before{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+</style></head><body data-page="home"><a class="skip" href="#main">پرش به محتوا</a>
 <header class="site-header"><div class="container header-row"><a class="brand" href="index.html" aria-label="خانه روهانی ۹۸"><span class="brand-mark">R<span style="color:#48e9f6">98</span></span><span><span class="brand-title">ROHANI<span>98</span></span><small class="brand-sub">SOFTWARE STUDIO</small></span></a>
 <nav class="nav" id="primary-nav" aria-label="فهرست اصلی">
 <a class="nav-link" data-nav="home" href="index.html">خانه</a>
@@ -13,6 +117,65 @@
 <section class="section studio-section" aria-labelledby="studio-title"><div class="container"><div class="studio-banner glass" data-aos><div class="studio-symbol">R<span>98</span></div><div class="studio-copy"><span class="eyebrow">THE CREATOR / ROHANI98</span><h2 id="studio-title">از ایده تا یک نرم‌افزار <span class="gradient-text">کاربردی</span></h2><p><strong>حافظ محمد یوسف روحانی جانان</strong> — برنامه نویس حرفه یی و سازنده پروژه‌های مجموعه Rohani98. تمرکز این مجموعه بر برنامه‌های ویندوز و اندروید، ابزارهای چندرسانه‌ای، هوش مصنوعی و طراحی راهکارهای مدیریتی و حسابداری است.</p><a href="about.html" class="btn btn-outline btn-sm">آشنایی با سازنده و پروژه‌ها</a></div></div></div></section>
 <div class="metrics-strip"><div class="container metrics-grid"><div class="metric"><span class="metric-icon"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5zm-9 10 9 5 9-5M3 17l9 5 9-5"/></svg></span><span><strong id="app-count">۰۶</strong><span>برنامه در کاتالوگ</span></span></div><div class="metric"><span class="metric-icon"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M3 5 11 4v8H3zm10-1 8-1v9h-8zM3 14h8v8l-8-1zm10 0h8v9l-8-1z"/></svg></span><span><strong id="windows-count">۰۴</strong><span>پروژه ویندوز</span></span></div><div class="metric"><span class="metric-icon"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><rect x="5" y="9" width="14" height="11" rx="2"/><path d="M7 9a5 5 0 0 1 10 0M8 3 6 1m10 2 2-2M2 11v6m20-6v6M8 20v2m8-2v2"/></svg></span><span><strong id="android-count">۰۲</strong><span>پروژه اندروید</span></span></div></div></div>
 <section class="section" id="software"><div class="container"><div class="section-head"><div><span class="eyebrow"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zm7 12 .8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg> SELECTED SOFTWARE</span><h2>برنامه‌های <span class="gradient-text">منتخب</span></h2><p>نمونه‌های قابل ویرایش از پروژه‌های مجموعه؛ وضعیت دانلود هر برنامه در صفحه خودش مشخص است.</p></div><a class="text-link" href="apps.html">مشاهده همه نرم‌افزارها <svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M19 12H5m7 7-7-7 7-7"/></svg></a></div><div class="apps-grid" id="featured-apps"></div></div></section>
+
+<!-- Rohani98 • Accounting promotion (independent self-contained section) -->
+<section class="r98p-wrap" id="accounting-solutions" aria-labelledby="r98p-main-heading">
+ <div class="r98p-container">
+  <div class="r98p-head">
+   <span class="r98p-overline">ROHANI98 / BUSINESS SOFTWARE</span>
+   <h2 class="r98p-heading" id="r98p-main-heading">حسابداری پیشرفته برای <span class="r98p-highlight">تجارت شما</span></h2>
+   <p class="r98p-intro">طراحی و توسعه نرم‌افزارهای مدیریتی و حسابداری مطابق نیاز مشتری؛ از فروشگاه و عمده‌فروشی تا شرکت‌های تجارتی، شرکت‌های دوا و صرافی‌ها. برای سیستم مخصوص کسب‌وکار خود سفارش ثبت کنید.</p>
+  </div>
+  <div class="r98p-showcase">
+   <div class="r98p-glass r98p-slide" id="r98p-slide" aria-label="معرفی انواع سیستم‌های حسابداری">
+    <div class="r98p-slide-top"><span class="r98p-chip">سفارش نرم‌افزار اختصاصی پذیرفته می‌شود</span><span class="r98p-number" id="r98p-count">01 / 07</span></div>
+    <div class="r98p-slide-inner" id="r98p-slide-content">
+     <h3 id="r98p-title">حسابداری <em>شرکت‌های تجارتی</em></h3>
+     <p id="r98p-description">سیستم‌های منظم برای ثبت خریدوفروش، مدیریت حساب‌ها، مصارف، بدهکاران و تهیه گزارش‌های مالی متناسب با فعالیت شرکت.</p>
+     <div class="r98p-benefits" id="r98p-benefits"><span>ثبت معاملات</span><span>حساب‌های مشتریان</span><span>گزارش‌های مالی</span></div>
+    </div>
+    <div class="r98p-controls"><button type="button" class="r98p-arrow" id="r98p-prev" aria-label="تبلیغ قبلی">›</button><div class="r98p-dots" id="r98p-dots" aria-label="انتخاب نوع کسب‌وکار"></div><button type="button" class="r98p-arrow" id="r98p-next" aria-label="تبلیغ بعدی">‹</button></div>
+   </div>
+   <div class="r98p-glass r98p-demo" aria-hidden="true">
+    <div class="r98p-hud">
+     <div class="r98p-orbit3"></div><div class="r98p-orbit"></div><div class="r98p-orbit2"></div>
+     <div class="r98p-hud-core"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><rect x="20" y="12" width="60" height="76" rx="9"/><path d="M34 28h32M34 42h13m14 0h5M34 57h13m14 0h5M34 72h13m14 0h5"/></svg></div>
+     <div class="r98p-mini one">REVENUE <span style="color:#4aefbb">↗</span></div>
+     <div class="r98p-mini two">FINANCIAL SYSTEMS</div>
+     <div class="r98p-mini three">● SYSTEM / READY</div>
+    </div>
+   </div>
+  </div>
+  <div class="r98p-servicebar" id="r98p-servicebar" aria-label="انتخاب زمینه حسابداری"><button type="button" data-r98p-to="0" aria-pressed="true">شرکت‌های تجارتی</button><button type="button" data-r98p-to="1" aria-pressed="false">خرید و فروش</button><button type="button" data-r98p-to="2" aria-pressed="false">عمده‌فروشی‌ها</button><button type="button" data-r98p-to="3" aria-pressed="false">فروشگاه‌ها</button><button type="button" data-r98p-to="4" aria-pressed="false">شرکت‌های دوا</button><button type="button" data-r98p-to="5" aria-pressed="false">صرافی‌ها</button><button type="button" data-r98p-to="6" aria-pressed="false">سفارش اختصاصی</button></div>
+  <div class="r98p-actions" style="justify-content:center"><a class="r98p-cta" href="contact.html?type=accounting#request-form">✦ سفارش ساخت برنامه حسابداری</a><a class="r98p-outline" href="https://wa.me/93706404348" target="_blank" rel="noopener noreferrer">مشاوره و سفارش در واتساپ ←</a></div>
+  <div class="r98p-glass r98p-faq" id="r98p-faq">
+   <div><span class="r98p-faq-label">QUESTION / ANSWER • حسابداری</span><h3 class="r98p-faq-title">پاسخ به <span class="r98p-highlight">سوالات شما</span></h3><p class="r98p-faq-sub">چرا یک سیستم حسابداری مناسب می‌تواند به مدیریت بهتر کسب‌وکار شما کمک کند؟ سوالات به‌صورت متحرک تغییر می‌کنند.</p></div>
+   <div class="r98p-faq-panel"><strong id="r98p-question">چرا باید از نرم‌افزار حسابداری استفاده کنیم؟</strong><p id="r98p-answer">برای منظم‌سازی اطلاعات، کاهش اشتباهات ثبت دستی، صرفه‌جویی در وقت و دسترسی آسان‌تر به گزارش‌های مالی.</p><div class="r98p-faq-buttons"><button type="button" id="r98p-faq-prev" aria-label="سوال قبلی">›</button><button type="button" id="r98p-faq-next" aria-label="سوال بعدی">‹</button></div><div class="r98p-progress" aria-hidden="true"><span id="r98p-faq-progress"></span></div></div>
+  </div>
+  <div class="r98p-ticker" aria-hidden="true"><div class="r98p-ticker-inner"><span>مدیریت خرید و فروش</span><span>گزارش سود و زیان</span><span>حساب مشتریان</span><span>مدیریت انبار</span><span>تاریخ انقضای دوا</span><span>معاملات چندارزی</span><span>سفارش اختصاصی</span><span>مدیریت خرید و فروش</span><span>گزارش سود و زیان</span><span>حساب مشتریان</span><span>مدیریت انبار</span><span>تاریخ انقضای دوا</span><span>معاملات چندارزی</span><span>سفارش اختصاصی</span></div></div>
+ </div>
+</section>
+
+
+<!-- Rohani98 • Separate founder & studio advertisement -->
+<section class="r98p-founder" id="rohani-founder" aria-labelledby="r98p-founder-title">
+ <div class="r98p-container r98p-founder-grid">
+  <div class="r98p-glass r98p-founder-card">
+   <span class="r98p-overline">FOUNDER / SOFTWARE DEVELOPER</span>
+   <h2 id="r98p-founder-title">حافظ محمد یوسف <span class="r98p-highlight">روحانی جانان</span></h2>
+   <p class="r98p-role">برنامه‌نویس حرفه‌ای | توسعه‌دهنده نرم‌افزارهای حسابداری و کاربردی</p>
+   <p class="r98p-location"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg> محل فعالیت: افغانستان، ولایت نیمروز</p>
+   <p class="r98p-bio">من حافظ محمد یوسف روحانی جانان، برنامه‌نویس و توسعه‌دهنده نرم‌افزار در مجموعه <strong>Rohani98 Software Studio</strong> هستم. در زمینه ساخت برنامه‌های ویندوز و اندروید و طراحی راهکارهای حسابداری، مدیریتی و تجارتی فعالیت می‌کنم. هدف من ارائه نرم‌افزارهای زیبا، کاربردی و متناسب با نیاز واقعی مشتریان است. برای شرکت‌ها، فروشگاه‌ها، عمده‌فروشی‌ها، شرکت‌های دوا، صرافی‌ها و سایر مشاغل نیز سفارش طراحی سیستم اختصاصی پذیرفته می‌شود.</p>
+   <div class="r98p-tags"><span>توسعه ویندوز و اندروید</span><span>حسابداری اختصاصی</span><span>طراحی حرفه‌ای</span><span>به‌روزرسانی مطابق سفارش</span></div>
+   <div class="r98p-actions"><a class="r98p-cta" href="about.html">درباره من و استودیو ←</a><a class="r98p-outline" href="contact.html?type=accounting#request-form">ثبت سفارش نرم‌افزار</a></div>
+  </div>
+  <div class="r98p-founder-graphic" aria-hidden="true">
+   <div class="r98p-emblem"><div class="r98p-emblem-core"><span>R98</span></div></div>
+   <span class="r98p-founder-floating f1">DEVELOPER / NIMROZ</span><span class="r98p-founder-floating f2">AFGHANISTAN 🇦🇫</span><span class="r98p-founder-floating f3">ROHANI98 SOFTWARE STUDIO</span>
+  </div>
+ </div>
+</section>
+
 <section class="section features-section"><div class="container"><div class="section-head center"><span class="eyebrow">WHY ROHANI98</span><h2>ساخته‌شده با <span class="gradient-text">نگاه حرفه‌ای</span></h2><p>سایت با ساختاری آماده توسعه طراحی شده است؛ محتوای هر برنامه را می‌توان بدون دست‌کاری بخش‌های گرافیکی تغییر داد.</p></div><div class="features-grid"><div class="feature-box" data-aos><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="m12 2 9 4v6c0 6-4 9-9 10-5-1-9-4-9-10V6z"/><path d="m8 12 3 3 5-5"/></svg><h3>اطلاعات روشن دانلود</h3><p>هر برنامه صفحه ویژه خود را دارد و تا ثبت آدرس فایل واقعی، دکمه دانلود غیرفعال می‌ماند.</p></div><div class="feature-box" data-aos><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg><h3>جست‌وجوی سریع</h3><p>یافتن نرم‌افزارها با جست‌وجو، دسته‌بندی و فیلتر اختصاصی ویندوز و اندروید.</p></div><div class="feature-box" data-aos><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg><h3>نمایش سازگار</h3><p>رابط فارسی راست‌به‌چپ با چیدمان واکنش‌گرا برای موبایل، تبلت و کامپیوتر.</p></div></div></div></section>
 <section class="section"><div class="container"><div class="cta-wrap"><div><span class="eyebrow">EXPLORE THE COLLECTION</span><h2>برنامه موردنظرتان را پیدا کنید</h2><p>وارد فهرست شوید و برنامه‌ها را بر اساس سیستم‌عامل بررسی کنید.</p></div><a class="btn btn-primary" href="apps.html">ورود به مرکز نرم‌افزارها <svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M19 12H5m7 7-7-7 7-7"/></svg></a></div></div></section><section class="section accounting-cta-section" aria-labelledby="accounting-request-heading"><div class="container"><div class="accounting-cta glass"><div><span class="eyebrow">CUSTOM SOFTWARE / REQUEST</span><h2 id="accounting-request-heading">نرم‌افزار <span class="gradient-text">حسابداری اختصاصی</span> برای کسب‌وکار شما</h2><p>برای شرکت، فروشگاه، داروخانه و مجموعه‌های مختلف، نیازهایتان را بنویسید و درخواست خود را مستقیماً از طریق واتساپ، تلگرام یا ایمیل بفرستید.</p><a class="btn btn-primary" href="contact.html?type=accounting#request-form"><svg class="i " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" aria-hidden="true"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V5c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2v2M3 12c4 3 14 3 18 0M12 12v3"/></svg> ثبت درخواست برنامه حسابداری</a></div><span class="accounting-cta-decoration"><svg class="i " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" aria-hidden="true"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V5c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2v2M3 12c4 3 14 3 18 0M12 12v3"/></svg></span></div></div></section></main><footer class="site-footer"><div class="container footer-contact-strip" aria-label="راه‌های ارتباط با Rohani98"><div class="footer-strip-title"><span class="strip-symbol"><svg class="i " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" aria-hidden="true"><path d="m22 2-7.5 20-3.7-8.8L2 9.5 22 2Z"/><path d="m22 2-11.2 11.2"/></svg></span><span><strong>درخواست ساخت برنامه یا پشتیبانی دارید؟</strong><small>از طریق واتساپ، تلگرام یا ایمیل در ارتباط باشید.</small></span></div><div class="footer-strip-links">
 <a href="https://wa.me/93706404348" target="_blank" rel="noopener noreferrer" class="footer-channel is-whatsapp"><svg class="i " viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" aria-hidden="true"><path d="M20.8 11.4a8.8 8.8 0 0 1-13.1 7.7L3 20.5l1.5-4.5a8.8 8.8 0 1 1 16.3-4.6Z"/><path d="M8.3 8.1c-.4.2-.9 1.1-.9 1.6 0 2.5 3.9 6 6.4 6 .6 0 1.3-.5 1.8-1.4l-2-1.2-.9 1c-1.2-.5-2.6-1.8-3-3.1l.9-.8-.9-2.1Z"/></svg> <span>واتساپ <b dir="ltr">0706404348</b></span></a>
@@ -21,4 +184,75 @@
 </div></div><div class="container"><div class="footer-grid"><div class="footer-about"><a class="brand" href="index.html" aria-label="خانه روهانی ۹۸"><span class="brand-mark">R<span style="color:#48e9f6">98</span></span><span><span class="brand-title">ROHANI<span>98</span></span><small class="brand-sub">SOFTWARE STUDIO</small></span></a><p>فضایی مستقل برای معرفی پروژه‌ها و ارائه نسخه‌های رسمی نرم‌افزارها؛ طراحی شده با تمرکز بر تجربه کاربری، سادگی و زیبایی.</p></div>
 <div class="footer-col"><h3>دسترسی سریع</h3><a href="index.html">صفحه اصلی</a><a href="apps.html">همه برنامه‌ها</a><a href="apps.html?platform=windows">برنامه‌های ویندوز</a><a href="apps.html?platform=android">برنامه‌های اندروید</a></div>
 <div class="footer-col"><h3>اطلاعات</h3><a href="about.html">درباره ما</a><a href="support.html">راهنمای نصب</a><a href="privacy.html">حریم خصوصی</a><a href="contact.html">تماس با ما</a></div>
-<div class="footer-col"><h3>یادآوری</h3><p class="footer-note">برای هر برنامه، توضیحات کامل و مشخصات نسخه درج شده است. فایل‌های آماده فقط از لینک رسمی منتشرکننده دریافت می‌شوند.</p><a class="text-link" href="support.html"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.8 9a2.5 2.5 0 1 1 4.3 2c-1.2 1.1-2.1 1.4-2.1 3M12 18h.01"/></svg> راهنمای دانلود</a></div></div><div class="footer-bottom"><span>© <span id="year"></span> ROHANI98 — تمامی حقوق محفوظ است.</span><span>توسعه و مدیریت: <a href="about.html">حافظ محمد یوسف روحانی جانان</a> — <b>R/98</b></span></div></div></footer></body></html>
+<div class="footer-col"><h3>یادآوری</h3><p class="footer-note">برای هر برنامه، توضیحات کامل و مشخصات نسخه درج شده است. فایل‌های آماده فقط از لینک رسمی منتشرکننده دریافت می‌شوند.</p><a class="text-link" href="support.html"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.8 9a2.5 2.5 0 1 1 4.3 2c-1.2 1.1-2.1 1.4-2.1 3M12 18h.01"/></svg> راهنمای دانلود</a></div></div><div class="footer-bottom"><span>© <span id="year"></span> ROHANI98 — تمامی حقوق محفوظ است.</span><span>توسعه و مدیریت: <a href="about.html">حافظ محمد یوسف روحانی جانان</a> — <b>R/98</b></span></div></div></footer><script id="rohani98-accounting-founder-scripts">
+
+/* Rohani98 homepage only: animated accounting promotions and FAQs. No dependencies. */
+(function(){
+'use strict';
+const root=document.getElementById('accounting-solutions');
+if(!root)return;
+const offerings=[
+ {name:'شرکت‌های تجارتی',desc:'طراحی سیستم‌های ثبت خرید و فروش، مدیریت حساب‌ها، مصارف، بدهکاری‌ها و تهیه گزارش‌های مالی متناسب با نیاز شرکت‌های تجارتی.',tags:['ثبت معاملات','حساب مشتریان','گزارش‌های مالی']},
+ {name:'خرید و فروش',desc:'مدیریت خرید، فروش، فاکتورها، مصارف، موجودی کالا و محاسبه سود و زیان در یک محیط منظم و قابل پیگیری.',tags:['فاکتور خرید و فروش','ثبت مصارف','سود و زیان']},
+ {name:'عمده‌فروشی‌ها',desc:'امکان طراحی سیستم مدیریت فروش عمده، قیمت‌های متفاوت، حساب مشتریان، بدهی‌ها و موجودی انبار.',tags:['فروش عمده','حساب بدهکاری‌ها','مدیریت انبار']},
+ {name:'فروشگاه‌ها',desc:'سیستم اختصاصی برای فروش روزانه، ثبت کالا، موجودی، تخفیف‌ها، رسید و گزارش‌های مدیریتی فروشگاه.',tags:['ثبت فروش','موجودی کالا','گزارش روزانه']},
+ {name:'شرکت‌های دوا',desc:'امکان سفارش نرم‌افزار مدیریت محصولات دارویی با ردیابی شماره بچ، تاریخ انقضا، موجودی و معاملات.',tags:['تاریخ انقضا','مدیریت بچ','فاکتور و موجودی']},
+ {name:'صرافی‌ها',desc:'طراحی سیستم ثبت معاملات چندارزی، نرخ تبدیل، کمیشن، حساب مشتریان و گزارش‌های موردنیاز، متناسب با ضوابط مربوط.',tags:['معاملات چندارزی','نرخ تبدیل','گزارش‌گیری']},
+ {name:'سفارش اختصاصی',desc:'هر کسب‌وکار روش کاری خاص خودش را دارد. امکانات، گزارش‌ها و طراحی رابط کاربری می‌توانند بر اساس سفارش و توافق توسعه داده شوند.',tags:['مطابق نیاز مشتری','توسعه مرحله‌ای','آپدیت توافقی']}
+];
+const questions=[
+ ['چرا باید از نرم‌افزار حسابداری استفاده کنیم؟','برای منظم‌سازی اطلاعات، کاهش اشتباهات ثبت دستی، صرفه‌جویی در وقت و دسترسی آسان‌تر به گزارش‌های مالی.'],
+ ['آیا برای شرکت‌ها و عمده‌فروشی‌ها برنامه اختصاصی ساخته می‌شود؟','بله؛ می‌توانید سیستم مدیریت خرید و فروش، موجودی، حساب مشتریان و گزارش‌ها را مطابق فعالیت کسب‌وکار سفارش دهید.'],
+ ['برای شرکت‌های دوا چه امکاناتی می‌توان طراحی کرد؟','مدیریت موجودی، شماره بچ، تاریخ انقضا، سفارش‌ها، فاکتورها و گزارش‌های موردنیاز، مطابق محدوده پروژه.'],
+ ['آیا سیستم حسابداری صرافی‌ها هم قابل سفارش است؟','بله؛ ثبت معاملات، نرخ تبدیل، حساب‌های چندارزی و گزارش‌ها را می‌توان با توجه به نیاز و مقررات مربوط طراحی کرد.'],
+ ['اگر شرکت من نیازهای ویژه‌ای داشته باشد چه؟','پیش از شروع پروژه، نیازهای شما بررسی می‌شود تا امکانات و طراحی نرم‌افزار بر اساس توافق تعیین شود.'],
+ ['آیا به‌روزرسانی‌های جدید هم ارائه می‌شود؟','امکان توسعه، اصلاح و افزودن قابلیت‌های تازه طبق نیاز مشتری و شرایط توافق‌شده وجود دارد.'],
+ ['چطور برای نرم‌افزار حسابداری سفارش بدهم؟','از دکمه «سفارش ساخت برنامه حسابداری» یا واتساپ استفاده کنید و نوع کسب‌وکار و امکانات موردنیاز را توضیح دهید.'],
+ ['آیا برای کاربران مختلف سطح دسترسی تعریف می‌شود؟','می‌توان در طراحی سیستم، نقش‌های کاربری، سطح دسترسی، ثبت سوابق و پشتیبان‌گیری را طبق نیاز پیش‌بینی کرد.']
+];
+const slide=document.getElementById('r98p-slide');
+const title=document.getElementById('r98p-title');
+const desc=document.getElementById('r98p-description');
+const benefits=document.getElementById('r98p-benefits');
+const count=document.getElementById('r98p-count');
+const dots=document.getElementById('r98p-dots');
+const tabs=Array.from(document.querySelectorAll('[data-r98p-to]'));
+const content=document.getElementById('r98p-slide-content');
+let current=0;
+let faqIndex=0;
+let carouselTimer;
+let faqTimer;
+const reduced=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const pad=n=>String(n).padStart(2,'0');
+function render(n){
+ current=(n+offerings.length)%offerings.length;
+ const item=offerings[current];
+ title.textContent='حسابداری '+item.name;
+ desc.textContent=item.desc;
+ benefits.replaceChildren(...item.tags.map(v=>{const el=document.createElement('span');el.textContent=v;return el;}));
+ count.textContent=pad(current+1)+' / '+pad(offerings.length);
+ dots.querySelectorAll('button').forEach((btn,i)=>{btn.setAttribute('aria-current',String(i===current));});
+ tabs.forEach((btn,i)=>btn.setAttribute('aria-pressed',String(i===current)));
+}
+for(let i=0;i<offerings.length;i++){
+ const btn=document.createElement('button');btn.type='button';btn.className='r98p-dot';btn.setAttribute('aria-label','نمایش تبلیغ '+offerings[i].name);btn.addEventListener('click',()=>{render(i);resetCarousel();});dots.append(btn);
+}
+function resetCarousel(){window.clearInterval(carouselTimer);if(!reduced)carouselTimer=window.setInterval(()=>{if(!document.hidden&&!slide.matches(':hover')&&!root.matches(':focus-within'))render(current+1);},5200);}
+const moveBy=d=>{render(current+d);resetCarousel();};
+document.getElementById('r98p-prev').addEventListener('click',()=>moveBy(-1));
+document.getElementById('r98p-next').addEventListener('click',()=>moveBy(1));
+tabs.forEach(b=>b.addEventListener('click',()=>{render(Number(b.dataset.r98pTo));resetCarousel();}));
+const q=document.getElementById('r98p-question');
+const a=document.getElementById('r98p-answer');
+const progress=document.getElementById('r98p-faq-progress');
+const faq=document.getElementById('r98p-faq');
+function renderFaq(i){faqIndex=(i+questions.length)%questions.length; q.textContent=questions[faqIndex][0];a.textContent=questions[faqIndex][1];if(progress){progress.style.animation='none';void progress.offsetWidth;progress.style.animation='';}}
+function resetFaq(){window.clearInterval(faqTimer);if(!reduced)faqTimer=window.setInterval(()=>{if(!document.hidden&&!faq.matches(':hover')&&!faq.matches(':focus-within'))renderFaq(faqIndex+1);},8000);}
+document.getElementById('r98p-faq-prev').addEventListener('click',()=>{renderFaq(faqIndex-1);resetFaq();});
+document.getElementById('r98p-faq-next').addEventListener('click',()=>{renderFaq(faqIndex+1);resetFaq();});
+// Restrict the subtle light response to the promotion panels, not the entire website.
+if(!reduced){root.querySelectorAll('.r98p-glass').forEach(panel=>{panel.addEventListener('pointermove',e=>{if(e.pointerType==='touch')return;const box=panel.getBoundingClientRect();panel.style.setProperty('--r98p-x',((e.clientX-box.left)/box.width*100)+'%');panel.style.setProperty('--r98p-y',((e.clientY-box.top)/box.height*100)+'%');},{passive:true});});}
+render(0);renderFaq(0);resetCarousel();resetFaq();
+})();
+
+</script></body></html>
