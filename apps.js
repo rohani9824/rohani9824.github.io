@@ -1,6 +1,6 @@
 /* Rohani98 catalog · نسخه حرفه‌ای معرفی نرم‌افزارها
    اطلاعات برنامه‌ها را اینجا به‌روزرسانی کنید؛ فایل‌های منتشرنشده با دانلود غیرفعال نمایش داده می‌شوند.
-   برنامه‌های منتشرشده شامل TriCalendarPro، MaxPlayer، InteractiveWallpaper و RohaniScreenshot هستند. */
+   توجه: MaxPlayer v1.0 و TriCalendarPro v5.0 به فایل‌های موجود در GitHub Releases متصل‌اند. */
 window.ROHANI_CONFIG = {
   "siteName": "Rohani98",
   "developer": "حافظ محمد یوسف روحانی جانان",
@@ -16,51 +16,49 @@ window.ROHANI_CONFIG = {
 };
 
 window.ROHANI_APPS = [
-    {
-        "id": "rohaniscreenshot",
-        "name": "RohaniScreenshot",
-        "platform": "windows",
-        "category": "تصویربرداری از صفحه",
-        "icon": "scan",
-        "accent": "cyan",
-        "featured": true,
-        "tagline": "تصویربرداری از صفحه نمایش با سبک جدید",
-        "description": "RohaniScreenshot یک نرم‌افزار تصویربرداری از صفحه نمایش برای ویندوز، از مجموعه Rohani98 Software Studio است. فایل نصب نسخه ۱٫۰ منتشر شده است. تصویرهای تبلیغاتی صفحه اختصاصی صرفاً طرح گرافیکی مفهومی هستند و لزوماً نمای واقعی یا فهرست ویژگی‌های تأییدشده برنامه نیستند.",
-        "features": [
-            "ابزار تصویربرداری از صفحه نمایش ویندوز",
-            "فایل نصب مستقل برای ویندوز",
-            "صفحه اختصاصی فارسی و راهنمای دریافت",
-            "نسخه ۱٫۰ منتشرشده در GitHub Releases"
-        ],
-        "version": "1.0",
-        "size": "23.05 MB",
-        "downloadUrl": "https://github.com/rohani9824/rohani9824.github.io/releases/download/rohaniscreenshot-v1.0/RohaniScreenshot_Setup.exe",
-        "status": "available",
-        "summary": "نرم‌افزار اختصاصی تصویربرداری از صفحه نمایش برای ویندوز با صفحه معرفی سایبری و گرافیکی.",
-        "audience": "کاربران ویندوز، تولیدکنندگان محتوا، مدرس‌ها و افرادی که از صفحه نمایش تصویر تهیه می‌کنند",
-        "requirements": [
-            "سیستم‌عامل ویندوز",
-            "میزان سازگاری و منابع موردنیاز دستگاه باید با اجرای نصب‌کننده بررسی شود",
-            "فایل نصب RohaniScreenshot_Setup.exe با حجم حدود ۲۳٫۰۵ مگابایت"
-        ],
-        "installation": [
-            "روی دکمه دانلود کلیک کنید و RohaniScreenshot_Setup.exe را از انتشار رسمی GitHub دریافت کنید.",
-            "فایل را در ویندوز اجرا کنید و مراحل نصب‌کننده را دنبال کنید.",
-            "پس از نصب، برنامه را باز کنید و امکانات آن را بررسی کنید."
-        ],
-        "releaseNotes": [
-            "انتشار RohaniScreenshot v1.0",
-            "فایل نصب برنامه برای ویندوز منتشر شده است.",
-            "صفحه معرفی تصویری در وب‌سایت Rohani98 اضافه شده است."
-        ],
-        "developer": "حافظ محمد یوسف روحانی جانان",
-        "developerRole": "برنامه نویس حرفه یی",
-        "publisher": "Rohani98 Software Studio",
-        "releaseUrl": "https://github.com/rohani9824/rohani9824.github.io/releases/tag/rohaniscreenshot-v1.0",
-        "fileName": "RohaniScreenshot_Setup.exe",
-        "fileType": "EXE — Windows Installer",
-        "landingUrl": "rohaniscreenshot.html"
-    },
+  {
+    "id": "rohaniscreenshot",
+    "name": "RohaniScreenshot",
+    "platform": "windows",
+    "category": "ابزار تصویربرداری",
+    "icon": "scan",
+    "accent": "cyan",
+    "featured": true,
+    "tagline": "تصویربرداری از صفحه نمایش ویندوز با طراحی مدرن",
+    "description": "RohaniScreenshot نرم‌افزاری برای ثبت تصویر از صفحه نمایش در ویندوز است. نسخه ۱٫۰ آن با فایل نصب ویندوز در GitHub Releases منتشر شده است. تصویر معرفی در سایت یک طرح گرافیکی مفهومی است و ممکن است با محیط واقعی برنامه متفاوت باشد.",
+    "features": [
+      "تصویربرداری از صفحه نمایش",
+      "ارائه فایل نصب مخصوص ویندوز",
+      "صفحه معرفی اختصاصی در سایت Rohani98"
+    ],
+    "version": "1.0",
+    "size": "23.05 MB",
+    "downloadUrl": "https://github.com/rohani9824/rohani9824.github.io/releases/download/rohaniscreenshot-v1.0/RohaniScreenshot_Setup.exe",
+    "status": "available",
+    "summary": "ابزار تصویربرداری از صفحه نمایش ویندوز با صفحه اختصاصی و فایل نصب قابل دانلود.",
+    "audience": "کاربران ویندوز که به ابزاری برای گرفتن اسکرین‌شات نیاز دارند",
+    "requirements": [
+      "سیستم‌عامل ویندوز",
+      "اجرای فایل نصبی RohaniScreenshot_Setup.exe",
+      "سازگاری دقیق با نسخه‌های مختلف ویندوز باید آزمایش شود"
+    ],
+    "installation": [
+      "فایل RohaniScreenshot_Setup.exe را از دکمه دانلود دریافت کنید.",
+      "فایل نصب را اجرا کرده و مراحل آن را دنبال کنید.",
+      "پس از نصب، برنامه را باز کرده و تصویربرداری از صفحه را امتحان کنید."
+    ],
+    "releaseNotes": [
+      "انتشار RohaniScreenshot نسخه ۱٫۰",
+      "انتشار فایل نصب در GitHub Releases"
+    ],
+    "developer": "حافظ محمد یوسف روحانی جانان",
+    "developerRole": "برنامه نویس حرفه یی",
+    "publisher": "Rohani98 Software Studio",
+    "releaseUrl": "https://github.com/rohani9824/rohani9824.github.io/releases/tag/rohaniscreenshot-v1.0",
+    "fileName": "RohaniScreenshot_Setup.exe",
+    "fileType": "EXE — Windows Installer",
+    "landingUrl": "rohaniscreenshot.html"
+  },
   {
     "id": "voicemind-ai-pro",
     "name": "VoiceMind AI Pro",
@@ -317,32 +315,31 @@ window.ROHANI_APPS = [
     "fileName": "InteractiveWallpaper_Setup.exe",
     "fileType": "EXE — Windows Installer",
     "landingUrl": "interactivewallpaper.html"
-  }
-];
+  }];
 
-/* صفحه‌های اختصاصی محصولات — نگه‌داری برنامه‌های پیشین */
+/* انتقال کلیک کارت‌های ویژه به صفحه‌های گرافیکی اختصاصی */
 (() => {
   'use strict';
-  const pages = {
-    'interactivewallpaper': 'interactivewallpaper.html',
-    'rohaniscreenshot': 'rohaniscreenshot.html'
+  const specialPages = {
+    interactivewallpaper: 'interactivewallpaper.html',
+    rohaniscreenshot: 'rohaniscreenshot.html'
   };
-  const appPageFor = href => {
+  const getPage = href => {
     try {
       const url = new URL(href, window.location.href);
       if (url.origin !== window.location.origin || !/\/app\.html$/i.test(url.pathname)) return '';
-      return pages[url.searchParams.get('id')] || '';
+      return specialPages[url.searchParams.get('id')] || '';
     } catch (_) { return ''; }
   };
-  const directPage = appPageFor(window.location.href);
-  if (directPage) {
-    window.location.replace(directPage);
+  const currentPage = getPage(window.location.href);
+  if (currentPage) {
+    window.location.replace(currentPage);
     return;
   }
   document.addEventListener('click', event => {
-    const el = event.target instanceof Element ? event.target.closest('a[href]') : null;
-    if (!el || event.defaultPrevented || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || el.target === '_blank' || el.hasAttribute('download')) return;
-    const page = appPageFor(el.href);
+    const link = event.target?.closest?.('a[href]');
+    if (!link || event.defaultPrevented || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || link.target === '_blank') return;
+    const page = getPage(link.href);
     if (!page) return;
     event.preventDefault();
     window.location.assign(page);
