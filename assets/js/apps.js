@@ -17,6 +17,49 @@ window.ROHANI_CONFIG = {
 
 window.ROHANI_APPS = [
   {
+    "id": "rohaniscreenshot",
+    "name": "RohaniScreenshot",
+    "platform": "windows",
+    "category": "ابزار تصویربرداری",
+    "icon": "scan",
+    "accent": "cyan",
+    "featured": true,
+    "tagline": "تصویربرداری از صفحه نمایش ویندوز با طراحی مدرن",
+    "description": "RohaniScreenshot نرم‌افزاری برای ثبت تصویر از صفحه نمایش در ویندوز است. نسخه ۱٫۰ آن با فایل نصب ویندوز در GitHub Releases منتشر شده است. تصویر معرفی در سایت یک طرح گرافیکی مفهومی است و ممکن است با محیط واقعی برنامه متفاوت باشد.",
+    "features": [
+      "تصویربرداری از صفحه نمایش",
+      "ارائه فایل نصب مخصوص ویندوز",
+      "صفحه معرفی اختصاصی در سایت Rohani98"
+    ],
+    "version": "1.0",
+    "size": "23.05 MB",
+    "downloadUrl": "https://github.com/rohani9824/rohani9824.github.io/releases/download/rohaniscreenshot-v1.0/RohaniScreenshot_Setup.exe",
+    "status": "available",
+    "summary": "ابزار تصویربرداری از صفحه نمایش ویندوز با صفحه اختصاصی و فایل نصب قابل دانلود.",
+    "audience": "کاربران ویندوز که به ابزاری برای گرفتن اسکرین‌شات نیاز دارند",
+    "requirements": [
+      "سیستم‌عامل ویندوز",
+      "اجرای فایل نصبی RohaniScreenshot_Setup.exe",
+      "سازگاری دقیق با نسخه‌های مختلف ویندوز باید آزمایش شود"
+    ],
+    "installation": [
+      "فایل RohaniScreenshot_Setup.exe را از دکمه دانلود دریافت کنید.",
+      "فایل نصب را اجرا کرده و مراحل آن را دنبال کنید.",
+      "پس از نصب، برنامه را باز کرده و تصویربرداری از صفحه را امتحان کنید."
+    ],
+    "releaseNotes": [
+      "انتشار RohaniScreenshot نسخه ۱٫۰",
+      "انتشار فایل نصب در GitHub Releases"
+    ],
+    "developer": "حافظ محمد یوسف روحانی جانان",
+    "developerRole": "برنامه نویس حرفه یی",
+    "publisher": "Rohani98 Software Studio",
+    "releaseUrl": "https://github.com/rohani9824/rohani9824.github.io/releases/tag/rohaniscreenshot-v1.0",
+    "fileName": "RohaniScreenshot_Setup.exe",
+    "fileType": "EXE — Windows Installer",
+    "landingUrl": "rohaniscreenshot.html"
+  },
+  {
     "id": "voicemind-ai-pro",
     "name": "VoiceMind AI Pro",
     "platform": "windows",
@@ -274,25 +317,31 @@ window.ROHANI_APPS = [
     "landingUrl": "interactivewallpaper.html"
   }];
 
-/* راهبری صفحه اختصاصی InteractiveWallpaper، بدون نیاز به تغییر main.js */
+/* انتقال کلیک کارت‌های ویژه به صفحه‌های گرافیکی اختصاصی */
 (() => {
   'use strict';
-  const specialId = 'interactivewallpaper';
-  const landingPage = 'interactivewallpaper.html';
-  const isSpecialAppLink = href => {
+  const specialPages = {
+    interactivewallpaper: 'interactivewallpaper.html',
+    rohaniscreenshot: 'rohaniscreenshot.html'
+  };
+  const getPage = href => {
     try {
       const url = new URL(href, window.location.href);
-      return /\/app\.html$/i.test(url.pathname) && url.searchParams.get('id') === specialId;
-    } catch { return false; }
+      if (url.origin !== window.location.origin || !/\/app\.html$/i.test(url.pathname)) return '';
+      return specialPages[url.searchParams.get('id')] || '';
+    } catch (_) { return ''; }
   };
-  if (isSpecialAppLink(window.location.href)) {
-    window.location.replace(landingPage);
+  const currentPage = getPage(window.location.href);
+  if (currentPage) {
+    window.location.replace(currentPage);
     return;
   }
   document.addEventListener('click', event => {
     const link = event.target?.closest?.('a[href]');
-    if (!link || !isSpecialAppLink(link.href) || event.defaultPrevented || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || link.target === '_blank') return;
+    if (!link || event.defaultPrevented || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || link.target === '_blank') return;
+    const page = getPage(link.href);
+    if (!page) return;
     event.preventDefault();
-    window.location.assign(landingPage);
+    window.location.assign(page);
   }, true);
 })();
