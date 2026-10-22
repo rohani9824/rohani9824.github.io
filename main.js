@@ -93,29 +93,103 @@
     if(!a){el.innerHTML=`<div class="not-found glass"><span class="eyebrow">۴۰۴ / برنامه پیدا نشد</span><h1>این برنامه در فهرست وجود ندارد.</h1><a class="btn btn-primary" href="apps.html">${icon('arrow')} بازگشت به برنامه‌ها</a></div>`;return;}
     document.title=`${a.name} | Rohani98`;
     const valid=isValidURL(a.downloadUrl);
+    const featureList=items=>(Array.isArray(items)&&items.length) ? `<ul class="feature-list">${items.map(f=>`<li>${icon('check')} ${escapeHTML(f)}</li>`).join('')}</ul>` : '<p>هنوز اطلاعاتی ثبت نشده است.</p>';
+    const lineList=items=>(Array.isArray(items)&&items.length) ? `<ul class="info-list">${items.map(f=>`<li>${escapeHTML(f)}</li>`).join('')}</ul>` : '<p>اطلاعات بیشتر هنگام انتشار ارائه می‌شود.</p>';
+    const developer=escapeHTML(a.developer||config.developer||'Rohani98 Software Studio');
+    const publisher=escapeHTML(a.publisher||config.studioName||'Rohani98 Software Studio');
+    const role=escapeHTML(a.developerRole||config.developerRole||'توسعه‌دهنده نرم‌افزار');
     el.innerHTML=`<div class="crumb"><a href="index.html">خانه</a><span>/</span><a href="apps.html">برنامه‌ها</a><span>/</span><strong>${escapeHTML(a.name)}</strong></div>
-      <div class="details-grid"><div class="details-main"><span class="eyebrow">${icon('layers')} معرفی نرم‌افزار / ROHANI98</span><h1>${escapeHTML(a.name)}</h1><p class="details-lead">${escapeHTML(a.tagline)}</p><div class="detail-tags"><span class="chip">${platformIcon(a.platform)} ${platformName(a.platform)}</span><span class="chip">${escapeHTML(a.category)}</span></div>
-      <div class="details-copy glass"><h2>درباره این برنامه</h2><p>${escapeHTML(a.description)}</p><h3>قابلیت‌ها</h3><ul class="feature-list">${(a.features||[]).map(f=>`<li>${icon('check')} ${escapeHTML(f)}</li>`).join('')}</ul></div></div>
-      <aside class="details-side"><div class="detail-art app-cover tone-${escapeHTML(a.accent)}"><span class="cover-orbit orbit-a"></span><span class="cover-orbit orbit-b"></span><div class="cover-icon">${icon(a.icon)}</div><span class="cover-id">R / 98 &nbsp; • &nbsp; SOFTWARE</span></div>
-      <div class="download-panel glass"><div class="mini-label">وضعیت انتشار</div><strong class="${valid?'ready':'waiting'}">${valid?'آماده دانلود':'فایل دانلود هنوز ثبت نشده'}</strong><div class="spec"><span>سیستم‌عامل</span><b>${platformName(a.platform)}</b></div><div class="spec"><span>نسخه</span><b>${escapeHTML(a.version||'—')}</b></div><div class="spec"><span>حجم فایل</span><b>${escapeHTML(a.size||'—')}</b></div>
+      <div class="details-grid"><div class="details-main"><span class="eyebrow">${icon('layers')} SOFTWARE / ROHANI98</span><h1>${escapeHTML(a.name)}</h1><p class="details-lead">${escapeHTML(a.tagline)}</p><div class="detail-tags"><span class="chip">${platformIcon(a.platform)} ${platformName(a.platform)}</span><span class="chip">${escapeHTML(a.category)}</span><span class="chip">${escapeHTML(a.version||'—')}</span></div>
+      <div class="details-copy glass"><h2>معرفی کامل نرم‌افزار</h2><p>${escapeHTML(a.description)}</p><p class="full-summary">${escapeHTML(a.summary||'')}</p><h3>قابلیت‌های برنامه</h3>${featureList(a.features)}</div>
+      <div class="details-copy glass extra-detail-card"><span class="eyebrow">TECHNICAL INFO</span><h2>مشخصات و نیازمندی‌ها</h2>${lineList(a.requirements)}<h3>مناسب برای</h3><p>${escapeHTML(a.audience||'کاربران علاقه‌مند به نرم‌افزارهای کاربردی')}</p></div>
+      <div class="details-copy glass extra-detail-card"><span class="eyebrow">INSTALLATION GUIDE</span><h2>روش نصب و راه‌اندازی</h2>${lineList(a.installation)}<h3>توضیحات نسخه</h3>${lineList(a.releaseNotes)}</div>
+      <div class="details-copy glass developer-card"><span class="eyebrow">DEVELOPER / STUDIO</span><div class="developer-label"><span class="developer-monogram">R98</span><div><h2>طراحی و توسعه توسط ${developer}</h2><p>${role} — ${publisher}</p></div></div><p>این برنامه یکی از پروژه‌های مجموعه Rohani98 است. حوزه‌های کاری استودیو شامل ساخت ابزارهای ویندوز و اندروید، برنامه‌های چندرسانه‌ای، هوش مصنوعی و طراحی راهکارهای مدیریتی و حسابداری است. مشخصات هر نسخه در همین صفحه قابل مشاهده است.</p><a class="text-link" href="about.html">آشنایی بیشتر با سازنده ${icon('arrow')}</a></div>
+      </div><aside class="details-side"><div class="detail-art app-cover tone-${escapeHTML(a.accent)}"><span class="cover-orbit orbit-a"></span><span class="cover-orbit orbit-b"></span><div class="cover-icon">${icon(a.icon)}</div><span class="cover-id">R / 98 &nbsp; • &nbsp; SOFTWARE</span></div>
+      <div class="download-panel glass"><div class="mini-label">وضعیت انتشار</div><strong class="${valid?'ready':'waiting'}">${valid?'آماده دانلود':'فایل دانلود هنوز ثبت نشده'}</strong><div class="spec"><span>سیستم‌عامل</span><b>${platformName(a.platform)}</b></div><div class="spec"><span>نسخه</span><b>${escapeHTML(a.version||'—')}</b></div><div class="spec"><span>حجم فایل</span><b dir="ltr">${escapeHTML(a.size||'—')}</b></div><div class="spec"><span>نام فایل</span><b class="spec-file" dir="ltr">${escapeHTML(a.fileName||'—')}</b></div><div class="spec"><span>نوع فایل</span><b>${escapeHTML(a.fileType||'—')}</b></div><div class="spec"><span>منتشرکننده</span><b>${publisher}</b></div>
       ${valid ? `<a class="btn btn-primary btn-block" href="${escapeHTML(a.downloadUrl)}" target="_blank" rel="noopener noreferrer">${icon('download')} دانلود برنامه</a>`:`<button class="btn btn-disabled btn-block" disabled>${icon('clock')} دانلود به‌زودی</button>`}
-      <p class="panel-note">${valid?'فایل را فقط از لینک رسمی این صفحه دریافت کنید.':'برای فعال کردن دانلود، لینک فایل واقعی را در assets/js/apps.js ثبت کنید.'}</p></div></aside></div>`;
+      ${isValidURL(a.releaseUrl)?`<a class="release-link" href="${escapeHTML(a.releaseUrl)}" target="_blank" rel="noopener noreferrer">${icon('external')} جزئیات انتشار در GitHub</a>`:''}
+      <p class="panel-note">${valid?'برای امنیت، فایل را فقط از لینک رسمی صفحه انتشار دریافت کنید.':'پس از آماده شدن نسخه قابل دانلود، دکمه فعال خواهد شد.'}</p></div></aside></div>`;
   }
   function contact() {
-    const mail=$('#contact-email'), github=$('#github-link'), telegram=$('#telegram-link');
-    if(mail){if(config.contactEmail){mail.textContent=config.contactEmail;mail.href=`mailto:${config.contactEmail}`;} else {mail.textContent='ایمیل هنوز ثبت نشده';mail.removeAttribute('href');mail.classList.add('not-set');}}
-    if(github){if(isValidURL(config.githubUrl)){github.href=config.githubUrl;}else{github.hidden=true;}}
-    if(telegram){if(isValidURL(config.contactTelegram)){telegram.href=config.contactTelegram;}else{telegram.hidden=true;}}
-    const form=$('#contact-form');if(!form)return;
-    form.addEventListener('submit',async e=>{
-      e.preventDefault();
-      if(!form.reportValidity())return;
-      const name=$('#sender-name').value.trim(),subject=$('#sender-subject').value.trim(),message=$('#sender-message').value.trim();
-      const text=`نام: ${name}\nموضوع: ${subject}\n\n${message}`;
-      if(config.contactEmail){location.href=`mailto:${encodeURIComponent(config.contactEmail)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(text)}`;toast('برنامه ایمیل شما برای ارسال پیام باز می‌شود.');}
-      else {
-        try{await navigator.clipboard.writeText(text);toast('پیام کپی شد. برای ارسال، ابتدا ایمیل سایت را تنظیم کنید.');}
-        catch {$('#message-preview').hidden=false;$('#message-preview').value=text;$('#message-preview').focus();toast('متن پیام را از کادر زیر کپی کنید.');}
+    const form = $('#contact-form');
+    if (!form) return;
+    const preview = $('#message-preview');
+    const draft = $('#draft-zone');
+    const feedback = $('#contact-feedback');
+    const whatsApp = config.contactWhatsApp || 'https://wa.me/93706404348';
+    const telegram = config.contactTelegram || 'https://t.me/+93706404348';
+    const email = config.contactEmail || 'afghanvafanorzahi@gmail.com';
+    const setFeedback = message => { if (feedback) feedback.textContent = message; };
+    const inputText = id => ($(id)?.value || '').trim();
+    const requestType = $('#request-type');
+    const queryType = new URLSearchParams(location.search).get('type');
+    if (queryType === 'accounting' && requestType) requestType.value = 'ساخت نرم‌افزار حسابداری';
+    const compose = () => {
+      if (!form.reportValidity()) return null;
+      const features = $$('#contact-form input[name="feature"]:checked').map(x=>x.value);
+      const lines = [
+        'درخواست جدید از وب‌سایت Rohani98',
+        '━━━━━━━━━━━━━━━━━━',
+        `نام: ${inputText('#sender-name')}`,
+        `نوع درخواست: ${inputText('#request-type')}`,
+        `عنوان: ${inputText('#sender-subject')}`,
+      ];
+      if (inputText('#sender-business')) lines.push(`نوع کسب‌وکار: ${inputText('#sender-business')}`);
+      if (inputText('#sender-platform')) lines.push(`پلتفرم: ${inputText('#sender-platform')}`);
+      if (inputText('#sender-contact')) lines.push(`راه تماس: ${inputText('#sender-contact')}`);
+      if (features.length) lines.push(`امکانات موردنیاز: ${features.join('، ')}`);
+      lines.push('', 'توضیحات:', inputText('#sender-message'), '', 'ارسال‌شده از rohani9824.github.io');
+      return lines.join('\n');
+    };
+    const showDraft = text => {
+      if (draft) draft.hidden = false;
+      if (preview) preview.value = text;
+    };
+    const openDestination = url => {
+      const tab = window.open(url, '_blank', 'noopener,noreferrer');
+      if (!tab) window.location.href = url;
+    };
+    $('#send-whatsapp')?.addEventListener('click', () => {
+      const message = compose(); if (message === null) return;
+      showDraft(message);
+      openDestination(`${whatsApp}?text=${encodeURIComponent(message)}`);
+      setFeedback('واتساپ باز می‌شود؛ لطفاً داخل چت دکمه ارسال را بزنید.');
+    });
+    $('#send-email')?.addEventListener('click', () => {
+      const message = compose(); if (message === null) return;
+      showDraft(message);
+      const subject = `Rohani98 | ${inputText('#request-type')} | ${inputText('#sender-subject')}`;
+      window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+      setFeedback('برنامه ایمیل شما باز می‌شود؛ لطفاً پیام را در همان برنامه ارسال کنید.');
+    });
+    $('#send-telegram')?.addEventListener('click', () => {
+      const message = compose(); if (message === null) return;
+      showDraft(message);
+      // Opening the link is synchronous to avoid popup blocking; clipboard may resolve later.
+      openDestination(telegram);
+      if (navigator.clipboard?.writeText) {
+        navigator.clipboard.writeText(message)
+          .then(() => setFeedback('متن درخواست کپی شد. آن را داخل چت تلگرام بچسبانید و ارسال کنید.'))
+          .catch(() => setFeedback('متن درخواست در کادر پایین آماده است؛ آن را کپی کنید و در تلگرام بفرستید.'));
+      } else {
+        setFeedback('متن درخواست در کادر پایین آماده است؛ آن را کپی کنید و در تلگرام بفرستید.');
+      }
+    });
+    $('#copy-request')?.addEventListener('click', async () => {
+      const message = preview?.value || compose();
+      if (!message) return;
+      showDraft(message);
+      try {
+        if (navigator.clipboard?.writeText) {
+          await navigator.clipboard.writeText(message);
+        } else {
+          preview.focus(); preview.select();
+          if (!document.execCommand('copy')) throw new Error('Copy failed');
+        }
+        setFeedback('متن درخواست کپی شد.');
+      } catch {
+        preview?.focus(); preview?.select();
+        setFeedback('متن پیام انتخاب شده است؛ با Ctrl+C آن را کپی کنید.');
       }
     });
   }
