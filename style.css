@@ -8,36 +8,3 @@ a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}b
 @media(max-width:800px){.site-header{height:73px}.mobile-menu{display:grid;place-items:center}.nav{position:absolute;top:73px;left:0;right:0;display:none;flex-direction:column;align-items:stretch;gap:0;padding:12px 24px 20px;background:rgba(7,16,29,.98);border-bottom:1px solid var(--line);box-shadow:0 20px 30px #0009}.nav.is-open{display:flex}.nav-link{padding:12px}.hero{padding:61px 0}.hero-grid{grid-template-columns:1fr}.hero h1{font-size:clamp(37px,8vw,56px)}.hero-visual{min-height:435px}.cyber-panel{width:min(450px,90vw);height:375px}.panel-center{inset:50px 0 35px}.radar{width:250px;height:250px}.radar-core{width:121px;height:121px}.metrics-grid{padding:17px 0}.apps-grid,.features-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.details-grid{grid-template-columns:1fr}.details-side{grid-template-columns:1fr 1fr}.contact-grid,.prose-grid{grid-template-columns:1fr}.section{padding:65px 0}}
 @media(max-width:570px){.container{width:min(100% - 30px,var(--max))}.brand-mark{width:40px;height:40px}.hero{padding:46px 0 40px}.hero h1{font-size:36px;letter-spacing:-.7px;line-height:1.56}.hero p{font-size:13px}.hero-actions{gap:9px}.hero-actions .btn{flex:1;min-width:130px;padding:10px 12px;font-size:12px}.hero-proof{gap:10px;margin-top:24px}.hero-proof .sep{display:none}.hero-visual{min-height:360px}.cyber-panel{height:320px;border-radius:25px}.panel-top{padding:15px}.panel-center{inset:42px 0 25px}.radar{height:212px;width:212px}.radar-core{height:100px;width:100px;border-radius:24px}.radar-core span{font-size:34px}.radar-badge{font-size:8px}.float-card{padding:9px 10px;gap:7px}.float-card b{font-size:10px}.float-card small{font-size:8px}.float-a{top:46px;right:-3px}.float-b{bottom:58px;left:-4px}.metrics-grid{gap:0}.metric{gap:7px;flex-direction:column;text-align:center}.metric-icon{width:35px;height:35px;border-radius:10px}.metric-icon .i{width:17px;height:17px}.metric strong{font-size:18px}.metric span{font-size:10px}.section{padding:53px 0}.section-head{align-items:start;flex-direction:column;gap:7px;margin-bottom:22px}.section-head h2,.page-heading h1{font-size:29px}.apps-grid,.features-grid,.details-side{grid-template-columns:1fr}.app-cover{height:205px}.app-card p{min-height:0}.feature-box{padding:22px}.cta-wrap{padding:26px 24px;display:block}.cta-wrap h2{font-size:23px}.cta-wrap .btn{margin-top:18px}.footer-grid{gap:21px}.footer-about{grid-column:span 2}.footer-bottom{flex-direction:column;align-items:start;gap:5px}.page-header{padding:51px 0 34px}.catalog-bar{align-items:stretch}.filters,.catalog-tools{width:100%}.filter-btn{flex:1}.search-control{flex:1;min-width:0}.catalog-sort{min-width:112px}.details-copy,.prose-card,.contact-form,.contact-side{padding:21px}.details-main h1{font-size:34px}.details-lead{font-size:15px}.feature-list{grid-template-columns:1fr}.form-fields{grid-template-columns:1fr}.form-fields .field{margin-bottom:0}.contact-grid{gap:14px}.toast{left:12px;right:12px;max-width:none}.not-found{padding:27px}.not-found h1{font-size:24px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}[data-aos]{opacity:1;transform:none}}
-
-/* Rohani98 enriched developer and app detail sections */
-.extra-detail-card {margin-top:17px}
-.details-main>.details-copy + .details-copy{margin-top:17px}
-.full-summary {margin-top:13px!important;color:#7de4f0!important}
-.info-list {list-style:none;padding:0;margin:10px 0 0;display:grid;gap:12px;counter-reset:info}
-.info-list li{position:relative;padding:0 26px 0 0;color:#b8ccdd;font-size:13px;line-height:2.1;counter-increment:info}
-.info-list li:before{content:counter(info,decimal-leading-zero);font:800 10px Arial,sans-serif;position:absolute;right:0;top:5px;color:#68e2f1}
-.developer-card{background:linear-gradient(140deg,rgba(19,66,88,.4),rgba(9,23,43,.95))!important;border:1px solid rgba(86,219,248,.23)!important}
-.developer-label{display:flex;gap:15px;align-items:center;margin:15px 0}
-.developer-label h2{font-size:18px;line-height:1.7;margin:0 0 4px}
-.developer-label p{font-size:12px;line-height:1.8;margin:0;color:#66dced}
-.developer-monogram,.studio-symbol{display:grid;place-items:center;flex-shrink:0;width:60px;height:60px;border-radius:17px;border:1px solid #4be0f46b;background:radial-gradient(circle at 30% 20%,#19728f,#081a30 75%);font:900 20px Arial,sans-serif;letter-spacing:-1px;color:#d1faff;box-shadow:0 0 32px #11d4f424}
-.spec-file{overflow-wrap:anywhere;text-align:left;max-width:58%;font-size:11px}
-.release-link{display:flex;justify-content:center;align-items:center;gap:8px;font-size:12px;color:#7edff3;margin-top:16px}
-.release-link:hover{text-decoration:underline}
-.release-link .i{height:16px;width:16px}
-.studio-banner{border-radius:25px;padding:30px 35px;display:flex;align-items:center;gap:25px;background:linear-gradient(115deg,#0c2132,#071523)!important;border:1px solid rgba(75,210,244,.22)!important;box-shadow:0 22px 70px #02091188}
-.studio-symbol{width:96px;height:96px;font-size:32px;border-radius:26px}
-.studio-symbol span{color:#50e8f8}
-.studio-copy{flex:1}
-.studio-copy h2{margin:10px 0;font-size:clamp(22px,2.8vw,32px)}
-.studio-copy p{color:#a9c3d5;font-size:14px;line-height:2.2;margin:0 0 17px}
-.studio-copy strong{color:#e4f9ff}
-.studio-services{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-.service-card{position:relative;padding:26px 28px;border-radius:20px}
-.service-no{font:800 12px Arial,sans-serif;color:#70e5f5;margin-bottom:12px;letter-spacing:2px}
-.service-card h3{font-size:18px;margin:0 0 10px}
-.service-card p{color:#a4bdd0;font-size:13px;line-height:2.25;margin:0}
-.footer-bottom a{color:#78dce9}
-.footer-bottom a:hover{text-decoration:underline}
-@media(max-width:800px){.studio-banner{padding:25px}.studio-services{grid-template-columns:1fr}}
-@media(max-width:570px){.studio-banner{display:block;padding:23px}.studio-symbol{width:72px;height:72px;font-size:24px;margin-bottom:20px}.developer-label{align-items:flex-start}.developer-label h2{font-size:15px}.info-list li{font-size:12px}.service-card{padding:22px}}
